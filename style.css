@@ -43,10 +43,26 @@
     gap: 1rem;
 }
 #track{
-    background-color: aquamarine;
     display: flex;
+    width: 200px;
+    background-color:white;
     grid-template-rows: auto;
-
+    color:blue ;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid lightskyblue;
+    margin: 20px;
+    box-shadow: 5px 5px 10px blueviolet;
+}
+.page{
+    text-align: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 10px;
 }
 footer{
     padding: 60px;

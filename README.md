@@ -1,1 +1,1 @@
-This page is dedicated to everyone 
+This page is dedicated to everyone To tell how Diabete

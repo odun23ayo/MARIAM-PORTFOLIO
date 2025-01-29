@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: red;
+    padding: 200px;
+}
+ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5rem;
+    padding: 40px;
+    list-style-type: none;
+}
+button{
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+.head{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
