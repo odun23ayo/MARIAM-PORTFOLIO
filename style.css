@@ -32,6 +32,15 @@
     background-color: blueviolet;
     color: azure;
 }
+h2{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+P{
+    text-align: center;
+    justify-content: center;
+}
 .but{
     transition: background-color 0.3s;
 }
@@ -48,14 +57,14 @@
 }
 #track{
     display: flex;
-    width: 200px;
+    width: 250px;
     background-color:white;
     grid-template-rows: auto;
+    height: 250px;
     color:blue ;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid lightskyblue;
-    margin: 20px;
     box-shadow: 5px 5px 10px blueviolet;
 }
 .page{
@@ -65,17 +74,27 @@
 }
 .container{
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 10px;
     border-radius: 10px;
-    flex-direction: row;
+    flex-direction:row-reverse;
     position: absolute;
     bottom: 0;
     left: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 footer{
-    margin: 20px;
+    color: white;
+    background-color: aqua;
+    text-align: center;
+    padding:10px 0px ;
+    bottom: 0;
+    position: absolute;
+    margin: 10px;
+    
 }
  .logo{
  color:blueviolet;
