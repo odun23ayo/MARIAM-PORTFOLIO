@@ -127,10 +127,3 @@ footer{
     height: 50px;
     padding-bottom: 20px;
 }
-aside{
-    float: right;
-}
-aside img {
-    height: auto;
-    max-width: 100%;
-}
