@@ -15,31 +15,51 @@
     height: auto;
     border-radius:100px;
 }
+.dropbtn{
+    background-color: #3498db;
+    color:white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #f1f1f1;
+}
 .heading{
     display: flex;
     gap: 1rem; 
     padding: 10px;
     align-items: center;
 }
-.doc{
-    background-color:aquamarine;
-}
 .but{
     border-radius: 5px;
     border: 0;
     width: 65px;
     height: 30px;
-    background-color: blueviolet;
+    background-color: #3498db;
     color: azure;
-}
-h2{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-P{
-    text-align: center;
-    justify-content: center;
 }
 .but{
     transition: background-color 0.3s;
@@ -47,25 +67,22 @@ P{
 .but:hover{
     background-color: darkmagenta;
 }
-.navy ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    text-align:center;
-    gap: 1rem;
-}
 #track{
     display: flex;
     width: 250px;
     background-color:white;
     grid-template-rows: auto;
+    text-align: center;
     height: 250px;
-    color:blue ;
-    padding: 10px;
+    color: #f3f6;
     border-radius: 10px;
     border: 2px solid lightskyblue;
-    box-shadow: 5px 5px 10px blueviolet;
+    box-shadow: 5px 5px 10px #3498db;
+}
+h2, p{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .page{
     text-align: center;
@@ -74,30 +91,28 @@ P{
 }
 .container{
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 10px;
     border-radius: 10px;
-    flex-direction:row-reverse;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
+    position:relative;
 }
 
 footer{
-    color: white;
-    background-color: aqua;
-    text-align: center;
-    padding:10px 0px ;
+    padding: absolute;
+    width: 100%;
     bottom: 0;
-    position: absolute;
-    margin: 10px;
-    
+    margin: 0;
 }
  .logo{
- color:blueviolet;
+ color:#3498db;
+ }
+ .navy ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    list-style:none ;
  }
  .navy a {
     text-decoration: none;
@@ -106,7 +121,7 @@ footer{
     align-items: center;
     text-align: center;
     text-decoration: underline;
-    color: blueviolet;
+    color: #3498db;
 }
 .section2{
     height: 50px;
@@ -114,9 +129,8 @@ footer{
 }
 aside{
     float: right;
-    margin-left: 20px;
 }
 aside img {
     height: auto;
-    width: 100%;
+    max-width: 100%;
 }
