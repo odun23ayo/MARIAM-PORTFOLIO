@@ -127,3 +127,20 @@ footer{
     height: 50px;
     padding-bottom: 20px;
 }
+.image-container{
+    background-color: #3498db;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+.doctor-image{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
