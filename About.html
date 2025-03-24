@@ -19,6 +19,9 @@
        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
        background: white;
        padding: 0.5px;
+       position: sticky;
+       top: 0;
+       z-index: 1000;
     }
     .navy ul {
        list-style: none;
@@ -29,12 +32,14 @@
         text-decoration:none ;
         color: #333;
         font-weight: bold;
+        float: right;
     }
     h1{
         padding: 10px;
         align-items: center;
         text-align: center;
         justify-content: center;
+        float: left;
     }
     .hero{
        display: flex;
@@ -207,7 +212,6 @@
         <h2>Resources</h2>
         <div class="portfolio-gallery">
             <img src="./m.jpg" alt="work 1">
-            <img src="./one dia.jpeg" alt="diabetes">
             <img src="./images/one diabetes.jpg" alt="healthy">
             <img src="./images/type.jpg" alt="exercise">
         </div>
