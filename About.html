@@ -9,16 +9,15 @@
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f5f5f5;
-        padding-top: 60px;
+        background-color: #f8f9fa;
     }
     header{
-    
        padding: 15px;
        display: flex;
        justify-content: space-between;
        align-items: center;
        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       background: white;
        padding: 0.5px;
     }
     .navy ul {
@@ -26,17 +25,10 @@
        display: flex;
        gap: 20px;
     } 
-    .navy  ul li {
-        display: inline;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background:transparent;
-        color: white;
-        padding: 20px;
-        z-index: 1000;
-        text-align: center;
-        transition: color 0.3s;
+    .navy  ul li  a {
+        text-decoration:none ;
+        color: #333;
+        font-weight: bold;
     }
     h1{
         padding: 10px;
@@ -44,28 +36,32 @@
         text-align: center;
         justify-content: center;
     }
-    .navy ul li a {
-       text-decoration: none;
-       color: #333;
-       font-weight: bold;
-    }
     .hero{
        display: flex;
        justify-content: space-between;
        align-items: center;
        padding: 50px;
        background:white;
+       margin: 50px auto;
+       width: 80%;
+       border-radius: 10px;
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     .hero img {
-        width: 400px;
+        width: 350px;
         height: 400px;
         padding: 10px;
     }
     .hero-content h2{
        font-size: 36px;
+       color: #333;
     }
     .hero-content span{
-       color: #0288d1;
+       color: #007bff;
+    }
+    .hero-content p{
+        color: #666;
+        line-height: 1.6;
     }
     .experience{
        display: flex;
@@ -82,20 +78,12 @@
         border: none;
         cursor: pointer;
         border-radius: 5px;
-    }
-    .box{
+    } 
+  .box{
        text-align: center;
-       padding: 10px;
+       padding: 20px;
        margin: 5px;
-       background: #f5f5f5;
-       float: left;
-
-    }  
-  .bax{
-       text-align: center;
-       padding: 240px;
-       padding-top:20px ;
-       gap: 1rem;
+       width: 200px;
        background: #f5f5f5;
 
     }
@@ -104,17 +92,16 @@
        text-align: center;
     }
     .intention{
-        justify-content: left;
         padding: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
         background:  #e3f2fd;
     }
     .intention img{
         width: 300px;
-        height: 400px;
-        padding: 10px;
-        margin: 10px 0;
-        float: left;
-        border-radius: 5px;
+        height: 350px;
+        border-radius: 10px;
 }
     .steps{
        display: flex;
@@ -125,13 +112,13 @@
        background: #bbdefb;
        padding: 15px;
        border-radius: 5px;
-       gap: 1rem;
+       width: 200px;
     }
-    .portfolio{
+    /*.portfolio{
        padding: 30px 10px;
        text-align: center;
        background: #e3f2fd;
-    }
+    }*/
     .portfolio-gallery{
        display: flex;
        justify-content: center;
@@ -140,11 +127,14 @@
     .portfolio-gallery img{
         width: 200px;
         height: 50px;
-        padding: 20px;
         border-radius: 5px;
     }
     footer{
         text-align: center;
+        padding: 15px;
+        background: #343a40;
+        color: white;
+        margin-top: 40px;
     }
     </style>
 </head>
@@ -160,53 +150,35 @@
         </nav>
     </header>
     <section class="hero">
+        <img src="./images/Snapchat-2022299138.jpg" alt="my left photo">
         <div class="hero-content">
             <h2>Hello, I'm <span>Adekunle Mariam</span></h2>
             <p>I'm a Web Designer and 
                 Developer based in
-                 Lagos, Nigeria
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            </p>
-            <p>Ut facilis optio atque provident sunt asperiores aspernatur rerum velit voluptatum officia. Ullam quod eligendi, in tenetur aliquid perspiciatis ipsum! Illo, quas!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-             Officia quaerat totam aut aliquid autem,
-             nemo mollitia! Voluptates
+                 Lagos, Nigeria. I create beautiful and functional web applications that
+                  improve user experiences and solve real-world problems.
              </p>
                  <button>Hire Me</button>
         </div>
-                 <!--<img src="./images/Snapchat-2022299138.jpg" alt="my photo">-->
-               <!--<section class="experience">-->
-                    <div class="box">
+                 <img src="./images/Snapchat-2022299138.jpg" alt="my Right photo">
+    </section>
+               <section class="stats">
+                    <div class="stats-box">
                         <h3>1+</h3>
                         <p>Years of Advocacy</p>
                        </div>
-                 <div class="box">
+                 <div class="stats-box">
                     <h3>10+</h3>
                     <p>People Educated</p>
                 </div>
-               <div class="box">
+               <div class="stats-box">
             <h3>1+</h3>
                     <p>Workshops Held </p>
                 </div>
-           <!--</section>-->
     </section>
-   <!--<section class="experience">
-           <div class="box">
-            <h3>1+</h3>
-            <p>Years of Advocacy</p>
-           </div>
-                <div class="box">
-                <h3>10+</h3>
-                <p>People Educated</p>
-            </div>
-           <div class="box">
-        <h3>1+</h3>
-                <p>Workshops Held </p>
-            </div>
-        </section>-->
-    <section class="intention">
-        <div class="bax">
-            <img src="./images/Snapchat-2022299138.jpg">
+    <section class="intention ">
+            <img src="./images/two diabetes.jpg">
+            <div>
             <h2>Why I Decided To Write A Page On Diabetes </h2>
             <p><strong>Diabetes</strong> has always been a thing of emphasis , which has got people talking due to the fact that a cure has 
             not been found for the menacing diseases, that has claims alot of lives daily.
@@ -218,20 +190,16 @@
         <h2>My Approach</h2>
         <div class="steps">
             <div class="step">1.Educate
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore reiciendis, quasi, tempora vitae suscipit obcaecati
-                   rerum illum iure reprehenderit quaerat vero. Dignissimos aut iusto quibusdam ea neque eaque sequi.</p>
+                <p>Providing valuable knowledge on diabetes prevention and Management.</p>
             </div>
             <div class="step">2.Support
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio iusto culpa dolorum perferendis voluptate ipsam odio animi minima maxime. Molestiae aperiam exercitationem maiores autem velit, 
-                   culpa inventore tempore quod minima.</p>
+                <p>Creating a community where people can share their experiences and get guidance.</p>
             </div>
             <div class="step">3.Prevent
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cum iure perspiciatis ratione vitae maxime. Quo non, ea eaque aperiam atque aspernatur perferendis dolorum repellat quasi,
-                   fuga odit facilis similique.</p>
+                <p>Offering strategies and lifestyles adjustments top  reduce diabetes risk.</p>
             </div>
             <div class="step">4.Manage
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, minima veniam explicabo et neque, iure deserunt officiis sequi quidem corporis eos maiores eveniet enim? 
-                   Eaque et hic adipisci explicabo sapiente.</p>
+                <p>Helping individuals with diabetes lead healthier and more active lives.</p>
             </div>
         </div>
     </section>
@@ -247,5 +215,6 @@
     <footer>
       <p>&copy; 2025 DiabetesCare | All Rights Reserved</p>  
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
