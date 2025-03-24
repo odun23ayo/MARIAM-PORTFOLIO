@@ -6,7 +6,7 @@ let lastScrollY = window.scrollY;
 window.addEventListener("scroll",function() {
     let nav = document.getElementById("navbar");
     if (Window.scrollY > 50) {
-        nav.classList.add("scrolled");
+        nav.classList.add("scrolled"); 
     } else {
         nav.classList.remove("scrolled");
     }
