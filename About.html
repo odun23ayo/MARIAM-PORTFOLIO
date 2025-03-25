@@ -11,46 +11,27 @@
         padding: 0;
         background-color: #f5f5f5;
     }
-    .container{
-        width: 100%;
-        margin: auto;
-        display: flex;
-        float: right;
-        max-width: 1200px;
-    }
-    .step{
-        background: #ecf0f1;
-        display: flex;
-        padding: 30px;
-        margin: 10px;
-        text-align: center;
-    }
-    .step p{
-
-        border-radius: 5px;
-    }
     header{
-       padding: 30px 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 15px 50px;
        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
        background: white;
        position: sticky;
        top: 0;
        z-index: 1000;
     }
-
-    nav{
-        float: right;
+    header h1{
+       color: #2c3e50;
+       margin: 0;
     }
-.navy h1 {
-    float: left;
-    color: #2c3e50;
-    display: flex;
-}
     nav ul {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
+        float: right;
     }
     nav ul li {
         margin: 0 15px;
@@ -59,6 +40,8 @@
         text-decoration: none;
         color: #2c3e50;
         font-weight: bold;
+        padding: 10px 15px;
+        transition: 0.3s;
     }
     .contact-btn{
         background: #8e44ad;
@@ -69,12 +52,12 @@
     .hero{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         padding: 60px 0;
         background: #ecf0f1;
     }
     .hero-content{
-        width: 50%;
+       max-width: 50%;
     }
     .hero-content h2{
         font-size: 36px;
@@ -86,7 +69,9 @@
     .hero-content p{
         font-size: 18px;
     }
-    .hero-image{
+    .hero-image img{
+        width: 300px;
+        border-radius: 10px;
     }
     .stats{
         display: flex;
@@ -99,64 +84,66 @@
         text-align: center;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        min-width: 120px;
     }
     .about{
-        padding: 60px 0;
+        padding: 60px 10%;
         text-align: center;
     }
     .about-content{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 20px;
     }
     .about img {
-        width: 200px;
+        width: 250px;
         border-radius: 10px;
     }
-    .buttons .btn {
-        text-decoration: none;
-        padding: 10px;
-        border-radius: 5px;
-        margin: 10px;
-    }
-    .work-process{
+    .work-process , .portfolio{
         text-align: center;
-        padding: 60px 0;
+        padding: 60px 10%;
     }
-    .process-grid{
+    .steps-grid{
         display: flex;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
     }
-    .process{
+    .step{
         background: white;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .portfolio{
-        text-align: center;
-        padding: 60px 0;
+        flex: 1;
+        min-width: 200px;
     }
     .portfolio-grid{
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
+        flex-wrap: wrap;
     }
     .portfolio-item img {
         width: 200px;
         border-radius: 10px;
     }
+    footer{
+        text-align: center;
+        padding: 20px;
+        background: #2c3e50;
+        color: white;
+    }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navy">
+        <nav>
             <h1>Adekunle Mariam</h1>
             <ul>
                 <li><a href="landing.html">Home</a></li>
                 <li><a href="#">About me</a></li>
-                <li><a href="#" class="contact-btn">Contact</a></li>
+                <li><a href="#contact.html" class="contact-btn">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -199,13 +186,10 @@
             <img src="./images/Snapchat-2022299138.jpg">
          <div>
             <h2>Why I Decided To Write A Page On Diabetes </h2>
-             <p><strong>Diabetes</strong> has always been a thing of emphasis , which has got people talking due to the fact that a cure has 
+             <p><strong>Diabetes</strong> has always been a major concern , which has got people talking due to the fact that a cure has 
             not been found for the menacing diseases, that has claims alot of lives daily.
         The disease causes , prevention , risks and symptoms has been sent out to the public but i feel more and more websites should be created to further enligthen the public that diabetes might not have a cure yet, but there are ways to reduce the rate of the disease by 
         following the guidlines i give in this my website then you will live a more healthier life of improved health . I hope you all follow up my page for more tips on health. </p>
-        <div class="buttons">
-            <a href="#" class="btn">My contacts</a>
-     </div>
       </div>
         </div>
         </div>
@@ -241,7 +225,7 @@
         </div>
     </section>
     <footer>
-      &copy 2025 DiabetesCare | All Rights Reserved
+     &copy;DiabetesCare | All Rights Reserved
     </footer>
     <script src="script.js"></script>
 </body>
