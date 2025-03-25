@@ -9,137 +9,143 @@
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f8f9fa;
+        background-color: #f5f5f5;
+    }
+    .container{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        float: right;
+        max-width: 1200px;
+    }
+    .step{
+        background: #ecf0f1;
+        display: flex;
+        padding: 30px;
+        margin: 10px;
+        text-align: center;
+    }
+    .step p{
+
+        border-radius: 5px;
     }
     header{
-       padding: 15px;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       padding: 30px 0;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
        background: white;
-       padding: 0.5px;
        position: sticky;
        top: 0;
        z-index: 1000;
     }
-    .navy ul {
-       list-style: none;
-       display: flex;
-       gap: 20px;
-    } 
-    .navy  ul li  a {
-        text-decoration:none ;
-        color: #333;
-        font-weight: bold;
+
+    nav{
         float: right;
     }
-    h1{
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        float: left;
+.navy h1 {
+    float: left;
+    color: #2c3e50;
+    display: flex;
+}
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+    .contact-btn{
+        background: #8e44ad;
+        color: white !important;
+        padding: 8px 15px;
+        border-radius: 5px;
     }
     .hero{
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       padding: 50px;
-       background:white;
-       margin: 50px auto;
-       width: 80%;
-       border-radius: 10px;
-       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    .hero img {
-        width: 350px;
-        height: 400px;
-        padding: 10px;
-    }
-    .hero-content h2{
-       font-size: 36px;
-       color: #333;
-    }
-    .hero-content span{
-       color: #007bff;
-    }
-    .hero-content p{
-        color: #666;
-        line-height: 1.6;
-    }
-    .experience{
-       display: flex;
-       justify-content: space-around;
-       padding: 20px;
-       margin: 20px;
-       background-color: #fff;
-       float: left;
-    }
-    button{
-        padding: 10px 20px;
-        background: #0288d1;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    } 
-  .box{
-       text-align: center;
-       padding: 20px;
-       margin: 5px;
-       width: 200px;
-       background: #f5f5f5;
-
-    }
-    .work-process{
-       padding: 30px;
-       text-align: center;
-    }
-    .intention{
-        padding: 30px;
         display: flex;
         align-items: center;
+        justify-content: center;
+        padding: 60px 0;
+        background: #ecf0f1;
+    }
+    .hero-content{
+        width: 50%;
+    }
+    .hero-content h2{
+        font-size: 36px;
+        color: #2c3e50;
+    }
+    .hero-content span{
+        color: #8e44ad;
+    }
+    .hero-content p{
+        font-size: 18px;
+    }
+    .hero-image{
+    }
+    .stats{
+        display: flex;
         gap: 20px;
-        background:  #e3f2fd;
+        margin-top: 20px;
     }
-    .intention img{
-        width: 300px;
-        height: 350px;
-        border-radius: 10px;
-}
-    .steps{
-       display: flex;
-       justify-content: center;
-       gap: 20px;
-    }
-    .step{
-       background: #bbdefb;
-       padding: 15px;
-       border-radius: 5px;
-       width: 200px;
-    }
-    /*.portfolio{
-       padding: 30px 10px;
-       text-align: center;
-       background: #e3f2fd;
-    }*/
-    .portfolio-gallery{
-       display: flex;
-       justify-content: center;
-       gap: 15px;
-    }
-    .portfolio-gallery img{
-        width: 200px;
-        height: 50px;
-        border-radius: 5px;
-    }
-    footer{
+    .stats div {
+        background: white;
+        padding: 20px;
         text-align: center;
-        padding: 15px;
-        background: #343a40;
-        color: white;
-        margin-top: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .about{
+        padding: 60px 0;
+        text-align: center;
+    }
+    .about-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about img {
+        width: 200px;
+        border-radius: 10px;
+    }
+    .buttons .btn {
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .work-process{
+        text-align: center;
+        padding: 60px 0;
+    }
+    .process-grid{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .process{
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .portfolio{
+        text-align: center;
+        padding: 60px 0;
+    }
+    .portfolio-grid{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .portfolio-item img {
+        width: 200px;
+        border-radius: 10px;
     }
     </style>
 </head>
@@ -150,50 +156,64 @@
             <ul>
                 <li><a href="landing.html">Home</a></li>
                 <li><a href="#">About me</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="contact-btn">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section class="hero">
-        <img src="./images/Snapchat-2022299138.jpg" alt="my left photo">
-        <div class="hero-content">
+        <div class="container">
+          <div class="hero-content">
             <h2>Hello, I'm <span>Adekunle Mariam</span></h2>
             <p>I'm a Web Designer and 
                 Developer based in
                  Lagos, Nigeria. I create beautiful and functional web applications that
                   improve user experiences and solve real-world problems.
              </p>
+             <div class="hero-image">
+                <img src="./images/Snapchat-2022299138.jpg" alt="Mariam photo">
+            </div>
                  <button>Hire Me</button>
-        </div>
-                 <img src="./images/Snapchat-2022299138.jpg" alt="my Right photo">
-    </section>
-               <section class="stats">
-                    <div class="stats-box">
+                    <div class="stats">
+                        <div>
                         <h3>1+</h3>
                         <p>Years of Advocacy</p>
                        </div>
-                 <div class="stats-box">
+                 <div>
                     <h3>10+</h3>
                     <p>People Educated</p>
                 </div>
-               <div class="stats-box">
+               <div>
             <h3>1+</h3>
                     <p>Workshops Held </p>
                 </div>
+             </div>
+         </div>
+               <!--<div class="hero-image">
+                    <img src="./images/Snapchat-2022299138.jpg" alt="Mariam photo">
+                </div>-->
+        </div>
     </section>
-    <section class="intention ">
-            <img src="./images/two diabetes.jpg">
-            <div>
+    <section class="about">
+      <div class="container">
+       <div class="about-content">
+            <img src="./images/Snapchat-2022299138.jpg">
+         <div>
             <h2>Why I Decided To Write A Page On Diabetes </h2>
-            <p><strong>Diabetes</strong> has always been a thing of emphasis , which has got people talking due to the fact that a cure has 
+             <p><strong>Diabetes</strong> has always been a thing of emphasis , which has got people talking due to the fact that a cure has 
             not been found for the menacing diseases, that has claims alot of lives daily.
         The disease causes , prevention , risks and symptoms has been sent out to the public but i feel more and more websites should be created to further enligthen the public that diabetes might not have a cure yet, but there are ways to reduce the rate of the disease by 
         following the guidlines i give in this my website then you will live a more healthier life of improved health . I hope you all follow up my page for more tips on health. </p>
+        <div class="buttons">
+            <a href="#" class="btn">My contacts</a>
+     </div>
+      </div>
+        </div>
         </div>
         </section> 
     <section class="work-process">
-        <h2>My Approach</h2>
-        <div class="steps">
+        <div class="container">
+          <h2>My Approach</h2>
+          <div class="steps-grid">
             <div class="step">1.Educate
                 <p>Providing valuable knowledge on diabetes prevention and Management.</p>
             </div>
@@ -206,18 +226,22 @@
             <div class="step">4.Manage
                 <p>Helping individuals with diabetes lead healthier and more active lives.</p>
             </div>
+          </div>
         </div>
     </section>
     <section class="portfolio">
-        <h2>Resources</h2>
-        <div class="portfolio-gallery">
-            <img src="./m.jpg" alt="work 1">
-            <img src="./images/one diabetes.jpg" alt="healthy">
-            <img src="./images/type.jpg" alt="exercise">
+        <div class="container">
+          <h2>Resources</h2>
+          <p>Here are some of my recent projects:</p>
+         <div class="portfolio-grid">
+            <div class="portfolio-item"><img src="./m.jpg" alt="work 1"></div> 
+            <div class="portfolio-item"><img src="./images/one diabetes.jpg" alt="healthy"></div>
+            <div class="portfolio-item"><img src="./images/type.jpg" alt="exercise"></div>
+         </div>
         </div>
     </section>
     <footer>
-      <p>&copy; 2025 DiabetesCare | All Rights Reserved</p>  
+      &copy 2025 DiabetesCare | All Rights Reserved
     </footer>
     <script src="script.js"></script>
 </body>
