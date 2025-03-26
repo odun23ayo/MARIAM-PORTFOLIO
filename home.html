@@ -13,6 +13,11 @@
         h1{
             color: #2c3e50;
         }
+        h2{
+            background: #2c3e50;
+            padding: 15px;
+            margin: 10px;
+        }
         table{
             width: 80%;
             margin: 20px auto;
@@ -31,7 +36,66 @@
         }
         tr:nth-child(even){
             background-color: #f2f2f2;
+        }  .chat-container{
+            width: 350px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 15px;
         }
+        .chat-box{
+            height: 300px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .message bot-message, .message user-message{
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+        .bot-message{
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            text-align: left;
+        }
+        .user-message{
+            background: #007bff;
+            color: white;
+            text-align: right;
+            margin-left: auto;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+       }
+       button{
+        padding: 8px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+       }
+       .title{
+        font-size: 18px;
+        font-weight: bold;
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 10px;
+       }
+        footer{
+            background: #2c3e50;
+            padding: 30px;
+            color: #fff;
+            margin: 10px ;
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -104,9 +168,11 @@
                 <td>chicken & vegetable soup</td>
             </tr>
         </table>
+        <hr>
         <section>
             <iframe width="1056" height="594" src="https://www.youtube.com/embed/ssB5fY5p_Ag" title="World Diabetes Day: Lagos Ministry of Health Initiative Highlights Prevention and Care" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
+        <hr>
         <section>
             <h2>Types of Diabetes</h2>
             <P>Diabetes is defined as an elevated blood sugar, but there are many causes of an elevated blood sugar. 
@@ -134,6 +200,67 @@
                 </table>
         </section>
         <p class="source"><strong>source:</strong> UCSF Diabetes Centre and National Institutes of Health</p>
+    <div class="chat-container">
+        <div class="title">Diabetes Chatbot Risk Checker</div>
+        <div class="chat-box" id="chatBox">
+            <div class="bot-message">Hello! I can check your diabetes risk. Please enter your symptoms (e.g., fatigue, blurry vision).
+             </div>
+             <input type="text" id="userInput" placeholder="Type symptoms here...">
+             <button onclick="SendMessage()">Send</button>
+             <script>
+                function SendMessage() {
+                    let InputField =
+                    document.getElementById("userInput");
+                    let ChatBox =
+                    document.getElementById("chatBox");
+                    let userText =
+                    InputField.value.trim();
+                    if (userText==="") return;
+                    let userMessage =
+                    document.createElement("div");
+                        userMessage.className ="user-message";
+                        userMessage.innerText = userText;
+                        ChatBox.appendChild(userMessage)
+                        setTimeout(() => {
+                            let botReply =
+                            checkSymptoms(userText);
+                            let botMessage =
+                            document.createElement("div");
+                            botMessage.className = "bot-message";
+                            botMessage.innerText = botReply;
+                            ChatBox.appendChild(botMessage);
+                            ChatBox.scrollTop =
+                            ChatBox.scrollHeight;
+                        },1000);
+                        InputField.value ="";
+                        }
+                        function checkSymptoms(input) {
+                            let userSymptoms =
+                            input.toLowerCase().split(',').map(symptom => symptom.trim())
+                            let diabetesSymptoms =[
+                                "frequent urination",
+                                "excessive thirst",
+                                "unexplained weight loss",
+                                "increased hunger",
+                                "fatigue",
+                                "blurry vision",
+                                "slow healing wounds",
+                                "tingling or numbness in hands or feet"
+                            ];
+                            let matches =
+                            userSymptoms.filter(symptom => diabetesSymptoms.includes(symptom));
+                            let resultText ="";
+                            if (matches.length >= 5) {
+                               resultText ="! High risk of diabetes. please consult a doctor.";
+                            } else if(matches.length >= 2)
+                            {
+                              resultText = "! moderate risk. Monitor your symptoms and seek medical advice if they persist.";
+                            } else{
+                              resultText = "Low risk. However, if you're concerned, consult a doctor."
+                            }
+                            return resultText;
+                        }
+             </script>
 
 </body>
 </html>
