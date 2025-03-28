@@ -23,7 +23,8 @@
        z-index: 1000;
     }
     header h1{
-       color: #2c3e50;
+       color: #8e44ad;
+       font-size: 24px;
        margin: 0;
     }
     nav ul {
@@ -54,7 +55,6 @@
         justify-content: space-between;
         padding: 60px 10%;
         background: #ecf0f1;
-        gap: 30px;
     }
     .hero-content{
        max-width: 50%;
@@ -72,7 +72,6 @@
     .hero-image img{
         width: 300px;
         border-radius: 10px;
-        float: right;
     }
     .stats{
         display: flex;
@@ -97,48 +96,43 @@
         justify-content: center;
         gap: 20px;
     }
+    .beep{
+        color: #3498db;
+    }
     .about img {
         width: 250px;
         border-radius: 10px;
     }
-    .work-process , .portfolio{
+    .work-process{
         text-align: center;
         padding: 60px 10%;
-    }
-    .work-process h2{
-        align-items: center;
-        text-align: center;
     }
     .steps-grid{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        align-items: center;
         max-width: 500px;
         margin: auto;
-        justify-content: center;
         gap: 20px;
-        float: right;
     }
     .step{
         background: white;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        flex: 1;
-        min-width: 200px;
+        box-shadow: 0 4px 10px rgba(157, 18, 211, 0.2);
+    }
+    .portfolio{
+        text-align: center;
+        padding: 60px 10%;
     }
     .portfolio-grid{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
-        max-width: 500px;
-        margin: auto;
     }
     .portfolio-item img {
         width: 200px;
         border-radius: 10px;
-        display: block;
     }
     footer{
         text-align: center;
@@ -158,9 +152,10 @@
             <h1>Adekunle</h1>
         <nav>
             <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#contact.html" class="contact-btn">Contact</a></li>
+                <li><a href="landing.html">Landing Page</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="contact.html" class="contact-btn">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -216,16 +211,16 @@
           <h2>My Approach</h2>
           <div class="steps-grid">
             <div class="step">1.Educate
-                <p>Providing valuable knowledge on diabetes prevention and Management.</p>
+                <p class="beep">Providing valuable knowledge on diabetes prevention and Management.</p>
             </div>
             <div class="step">2.Support
-                <p>Creating a community where people can share their experiences and get guidance.</p>
+                <p class="beep">Creating a community where people can share their experiences and get guidance.</p>
             </div>
             <div class="step">3.Prevent
-                <p>Offering strategies and lifestyles adjustments top  reduce diabetes risk.</p>
+                <p class="beep">Offering strategies and lifestyles adjustments top  reduce diabetes risk.</p>
             </div>
             <div class="step">4.Manage
-                <p>Helping individuals with diabetes lead healthier and more active lives.</p>
+                <p class="beep">Helping individuals with diabetes lead healthier and more active lives.</p>
             </div>
           </div>
         </div>

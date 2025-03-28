@@ -67,7 +67,7 @@
 .but:hover{
     background-color: darkmagenta;
 }
-#track{
+.track{
     display: flex;
     width: 250px;
     background-color:white;
