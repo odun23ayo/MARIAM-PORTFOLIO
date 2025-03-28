@@ -9,12 +9,22 @@
             font-family: Arial,  sans-serif;
             background-color: #f5f5f5;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        h1{
-            color: #2c3e50;
-        }
-        h2{
+        header{
             background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold; 
+        }
+        .content{
+            flex: 1;
+        } 
+        h2{
             color: white;
             padding: 15px;
             margin: 10px;
@@ -37,7 +47,8 @@
         }
         tr:nth-child(even){
             background-color: #f2f2f2;
-        }  .chat-container{
+        }  
+        .chat-container{
             width: 350px;
             background: white;
             border-radius: 8px;
@@ -81,6 +92,7 @@
         color: white;
         cursor: pointer;
         margin-top: 10px;
+        border-radius: 5px;
        }
        .title{
         font-size: 18px;
@@ -91,17 +103,22 @@
        }
         footer{
             background: #2c3e50;
-            padding: 30px;
-            color: #fff;
-            margin: 10px ;
+            padding: 20px;
+            color:white;
+            margin-top: 20px ;
+            text-align: center;
         }
         
         
     </style>
 </head>
 <body>
-    <h1>7-Day Diabetes Meal 
-        plan</h1>
+    <div class="content">
+    <header>
+        <h1>7-Day Diabetes Meal 
+        plan
+    </h1>
+    </header>
         <table>
             <tr>
                <th>Day</th>
@@ -189,18 +206,18 @@
                     <tr>
                         <td><strong>Prevalence</strong></td>
                         <td>Most common form of diabetes in children (also called "juvenile diabetes"). Accounts for about 5% of adult Diabetes cases.</td>
-                        <td>Most common form of diabetes , representing 90 t0 95% of diabetes worldwide.</td>
+                        <td>Most common form of diabetes , representing 90 to 95% of diabetes worldwide.</td>
                         <td>About 3 to 8% of pregnant women in the U.S. develop this condition .</td>
                     </tr>
                     <tr>
                         <td><strong>Cause</strong></td>
-                        <td>An antoimmune disorder, in which the body's immune system mistakenly destroys its insulin-producing cells, making the person unable to produce the insulin that delivers sugar into their cells.</td>
+                        <td>An autoimmune disorder, in which the body's immune system mistakenly destroys its insulin-producing cells, making the person unable to produce the insulin that delivers sugar into their cells.</td>
                         <td>A dual defect of resistance to the action of insulin, combined with an inability to make enough insulin to overcome the resistance.</td>
                         <td>The hormones of pregnancy or a shortage of insulin.</td>
                         </tr>
                 </table>
         </section>
-        <p class="source"><strong>source:</strong> UCSF Diabetes Centre and National Institutes of Health</p>
+        <p class="source"><strong>source:</strong> UCSF Diabetes  center and National Institutes of Health</p>
     <div class="chat-container">
         <div class="title">Diabetes Chatbot Risk Checker</div>
         <div class="chat-box" id="chatBox">
@@ -208,6 +225,11 @@
              </div>
              <input type="text" id="userInput" placeholder="Type symptoms here...">
              <button onclick="SendMessage()">Send</button>
+        </div>
+             </div>
+             <footer>
+                &copy;2025 Diabetes Awareness | All Right Reserved
+             </footer>
              <script>
                 function SendMessage() {
                     let InputField =
@@ -254,7 +276,7 @@
                             userSymptoms.filter(symptom => diabetesSymptoms.includes(symptom));
                             let resultText ="";
                             if (matches.length >= 5) {
-                               resultText ="! High risk of diabetes. please consult a doctor.";
+                               resultText ="! High risk of diabetes. Please consult a doctor.";
                             } else if(matches.length >= 2)
                             {
                               resultText = "! moderate risk. Monitor your symptoms and seek medical advice if they persist.";
@@ -264,8 +286,7 @@
                             return resultText;
                         }
              </script>
-     <footer>
-        &copy;2025 Diabetes Awareness | All Right Reserved
-     </footer>
+
+     
 </body>
 </html>
