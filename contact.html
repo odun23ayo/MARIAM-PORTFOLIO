@@ -4,10 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact form</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        p{
+            color: #007BFF;
+        }
+        .container{
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0,0,0.1,);
+            flex-wrap: wrap;
+        }
+        input,textarea{
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Contact Me</h2>
+    <div class="container">
+    <h2>Contact Me - Diabetes Awareness</h2>
     <p>Have any questions or need help ? Fill out the form below:</p>
-    <form action="submit_form.php" method="post"></form>
+    <form action="submit_form.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    </div>
 </body>
 </html>
