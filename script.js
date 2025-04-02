@@ -21,3 +21,14 @@ window.addEventListener("scroll",function() {
     }
     lastScrollY = window.scrollY;
 });
+const text = "Adekunle Mariam";
+let index = 0;
+
+function typeEffect() {
+    Document.getElementById("typing-text").innerText = text.slice(0,index);
+    index++;
+    if (index <= text.length) {
+        setTimeout(typeEffect,150)
+    }
+}
+window.onload = typeEffect;

@@ -101,6 +101,22 @@
         text-align: center;
         margin-bottom: 10px;
        }
+       @keyframes slideIn{
+        from{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+       }
+       .siide-text{
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
+        animation: slideIn 1.5s ease-out;
+       }
         footer{
             background: #2c3e50;
             padding: 20px;
@@ -115,9 +131,7 @@
 <body>
     <div class="content">
     <header>
-        <h1>7-Day Diabetes Meal 
-        plan
-    </h1>
+    <h1 class="slide-text">7-Day Diabetes Meal plan <h1>
     </header>
         <table>
             <tr>
@@ -128,7 +142,7 @@
                <th>Dinner</th>
             </tr>
             <tr>
-                <td>Monday</td>
+                <td>Monday</td> 
                 <td>Scrambled eggs with 
                     spinach & whole wheat toast</td>
                 <td>Grilled chicken salad 

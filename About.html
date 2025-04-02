@@ -58,6 +58,7 @@
     }
     .hero-content{
        max-width: 50%;
+       flex: 1;
     }
     .hero-content h2{
         font-size: 36px;
@@ -69,13 +70,18 @@
     .hero-content p{
         font-size: 18px;
     }
+    .hero-image {
+        flex: 1;
+        text-align: right;
+    }
     .hero-image img{
-        width: 300px;
+        width: 350px;
         border-radius: 10px;
+        max-width: 100%;
     }
     .stats{
         display: flex;
-        gap: 20px;
+        gap: 10px;
         margin-top: 20px;
     }
     .stats div {
@@ -91,18 +97,28 @@
         text-align: center;
     }
     button{
-        padding: 10px;
-        margin-top: 10px;
+        padding: 12px 20px;
+        margin-top: 15px;
         background-color: #8e44ad;
-        color: #ecf0f1;
+        color: white;
         border: none;
+        font-size: 16px;
         border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover{
+        background-color: #732d91;
+        transform: scale(1.05);
     }
     .about-content{
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+    .stats:hover{
+        transform: scale(1.1);
     }
     .beep{
         color: #3498db;
@@ -120,8 +136,8 @@
     }
     .steps-grid{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        max-width: 500px;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        max-width: 700px;
         margin: auto;
         gap: 20px;
     }
@@ -130,6 +146,9 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(157, 18, 211, 0.2);
+    }
+    .step:hover{
+        transform: scale(1.1);
     }
     .miss{
         text-decoration: none;
@@ -152,6 +171,10 @@
     .portfolio-item img {
         width: 200px;
         border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .portfolio-item img:hover{
+        transform: scale(1.1);
     }
     footer{
         text-align: center;
@@ -181,7 +204,7 @@
     <section class="hero">
         <div class="container">
           <div class="hero-content">
-            <h2 class="miss">Hello, I'm <span>Adekunle Mariam</span></h2>
+            <h2 class="miss">Hello, I'm <span id="typing-text">Adekunle Mariam</span></h2>
             <p>I'm a Web Designer and 
                 Developer based in
                  Lagos, Nigeria. I create beautiful and functional web applications that
@@ -217,10 +240,9 @@
             <img src="./images/Snapchat-2022299138.jpg">
          <div>
             <h2>Why I Decided To Write A Page On Diabetes </h2>
-             <p><strong>Diabetes</strong> has always been a major concern , which has got people talking due to the fact that a cure has 
-            not been found for the menacing diseases, that has claims alot of lives daily.
-        The disease causes , prevention , risks and symptoms has been sent out to the public but i feel more and more websites should be created to further enligthen the public that diabetes might not have a cure yet, but there are ways to reduce the rate of the disease by 
-        following the guidlines i give in this my website then you will live a more healthier life of improved health . I hope you all follow up my page for more tips on health. </p>
+             <p><strong>Diabetes</strong> is a major  health concern , and despite extensive research, a cure has not yet been found. Millions of lives are affected daily.</p>
+             <p>While awareness campaigns exist, I believe we need **more educational resources* to help people understand diabetes prevention and management.</p>
+             <p>Through my website, I will share **guidelines and tips** that promote a healthier lifestyle and reduce diabetes risks. Follow my page for **insight on living a diabetes-conscious life** </p>
       </div>
         </div>
         </div>
