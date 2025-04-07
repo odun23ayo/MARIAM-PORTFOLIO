@@ -26,9 +26,9 @@
             flex: 1;
         } 
         h2{
-            color: white;
+            color: #f2f2f2;
+            background: #2c3e50;
             padding: 15px;
-            margin: 10px;
         }
         table{
             width: 80%;
@@ -112,6 +112,33 @@
             opacity: 1;
         }
        }
+       h2{
+        text-align: center;
+        margin-bottom: 20px;
+       }
+       .gallery{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+       }
+       .photo-card{
+        width: 80%;
+        max-width: 400px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s;
+       }
+       .photo-card img{
+        width: 100%;
+        height: auto;
+       }
+       .photo-card:hover{
+        transform: scale(1.02);
+       }
        .siide-text{
         display: inline-block;
         font-size: 24px;
@@ -133,6 +160,54 @@
     <header>
     <h1 class="slide-text">7-Day Diabetes Meal plan <h1>
     </header>
+    <h2>Photo Gallery of Diabetes Diets</h2>
+    <div class="gallery" id="gallery">
+        <div class="photo-card">
+            <img src="./images/avo.jpeg" alt="avocado">
+            </div>
+            <div class="photo-card">          
+            <img src="./images/beans.jpeg" alt="beans">
+            </div>
+            <div class="photo-card">
+            <img src="./images/ber.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/broc.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/brown.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/cher.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/chi.jpg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/chick.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/fish.jpg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/lent.jpg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/nut.jpg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/pear.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/wheat.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/spin.jpeg" alt="">
+            </div>
+            <div class="photo-card">
+            <img src="./images/oliv.jpeg" alt="">
+            </div>
+        </div>
         <table>
             <tr>
                <th>Day</th>
@@ -299,6 +374,20 @@
                             }
                             return resultText;
                         }
+                        const cards = document.querySelectorAll('photo-card');
+                        let current = 0 ;
+                        function showOnly(index) { cards.forEach((card,i) =>
+                        {
+                        card.style.display = i === index ? 'block' : 'none';
+                    });   
+                        }
+                        showOnly(current);
+                        setInterval(() =>{
+                            current =(current + 1) %
+                            cards.length;
+                            showOnly(current);
+                        },4000);
+
              </script>
 
      
