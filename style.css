@@ -5,13 +5,10 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 .head{
     padding:1rem;
@@ -20,42 +17,15 @@ body{
     justify-content: space-between;
     list-style: none;
 }
+
+h1,h2{
+  text-align: center;
+  color: #3498db;
+}
 .small-logo{
     width: 50px;
     height: auto;
     border-radius:100px;
-}
-.dropbtn{
-    background-color: #3498db;
-    color:white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropdown-content a:hover{
-    background-color: #f1f1f1;
 }
 .heading{
     display: flex;
@@ -66,35 +36,33 @@ body{
 .but{
     border-radius: 5px;
     border: 0;
-    width: 65px;
-    height: 30px;
+    cursor: pointer;
     background-color: #3498db;
-    color: azure;
-}
-.but{
-    transition: background-color 0.3s;
+    padding: 10px;
 }
 .but:hover{
     background-color: darkmagenta;
 }
-aside{
+/*aside{
     flex: 1;
     text-align: right;
-    padding-left: 20px;
-}
+    padding-right: 20px;
+}*/
 .track{
-    margin: 10px 0;
-    padding: 20px;
+    margin-bottom: 20px ;
+    padding: 15px;
+    margin:10px ;
     background:white;
     border-radius: 10px;
     border: 2px solid lightskyblue;
     box-shadow: 0px 0px 10px #3498db;
+    transition: ease-in-outss ;
 }
 .track button{
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 15px;
     background-color: #8e44ad;
-    color: white;
+    color:black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -102,13 +70,8 @@ aside{
     text-decoration: none;
 }
 .track button:hover{
-    background-color: #732d91;
+    background-color: #3498db;
     transform: scale3d(1.05);
-}
-h2, p{
-    text-align: center;
-    display: flex;
-    justify-content: center;
 }
 .page{
     text-align: center;
@@ -123,14 +86,14 @@ h2, p{
     flex: 1;
 }
 
-footer{
+.foot{
+    padding: 20px 200px;
     text-align: center;
-    padding: 20px;
     background: #2c3e50;
     color: white;
-    margin-top: auto;
+    margin-top: 600px;
 }
- .logo{
+ h3.logo{
  color:#3498db;
  }
  .navy ul{
@@ -140,8 +103,10 @@ footer{
     gap: 1rem;
     list-style:none ;
  }
- .navy a {
+ a {
     text-decoration: none;
+    color: aliceblue;
+    color: black;
  }
 .section1{
     align-items: center;
@@ -154,18 +119,18 @@ footer{
     padding-bottom: 20px;
 }
 .image-container{
-    background-color: #3498db;
+   /* background-color: #3498db;*/
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     width: fit-content;
-    margin: auto;
-    position: relative;
 }
 .doctor-image{
-    width: 100%;
     max-width: 300px;
     border-radius: 10px;
+}
+@media  {
+    
 }
