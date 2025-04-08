@@ -22,6 +22,27 @@
             font-size: 24px;
             font-weight: bold; 
         }
+        <!-- Add inside <head> -->
+    /* Responsive design tweaks */
+    @media (max-width: 768px) {
+        table, .photo-card, iframe, .chat-container {
+            width: 95% !important;
+        }
+        iframe {
+            height: 250px;
+        }
+        header h1 {
+            font-size: 20px;
+        }
+        .chat-container {
+            margin: auto;
+        }
+    }
+
+    .spell-error {
+        background-color: #ffcccc;
+        border-bottom: 2px solid red;
+    }
         .content{
             flex: 1;
         } 
