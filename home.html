@@ -330,6 +330,27 @@
              </footer>
              <script>
                 function SendMessage() {
+    const dictionary = [
+        "frequent", "urination", "excessive", "thirst", "unexplained", "weight", "loss",
+        "increased", "hunger", "fatigue", "blurry", "vision", "slow", "healing",
+        "wounds", "tingling", "numbness", "hands", "feet", "diabetes", "risk", "consult",
+        "doctor", "please", "monitor", "symptoms", "persistent", "low", "moderate", "high"
+    ];
+
+    const inputField = document.getElementById("userInput");
+
+    inputField.addEventListener("input", () => {
+        const text = inputField.value;
+        const words = text.split(/\s+/);
+        const lastWord = words[words.length - 1].toLowerCase();
+
+        // Check spelling
+        if (lastWord && !dictionary.includes(lastWord)) {
+            inputField.classList.add("spell-error");
+        } else {
+            inputField.classList.remove("spell-error");
+        }
+    });
                     let InputField =
                     document.getElementById("userInput");
                     let ChatBox =
