@@ -39,7 +39,8 @@ The contact page allows users to reach out for inquiries, feedback, or support. 
 - **Interactive Tools**: Includes quizzes and calculators to help users assess their health risks.
 - **Community Engagement**: Features a blog and forum for users to share experiences and support each other.
 
-### Technologies Used: The section lists the main technologies used in the project like HTML, CSS, JavaScript,  and Git/GitHub for version control.
+### Technologies Used: 
+- **The section lists**: The main technologies used in the project like HTML, CSS, JavaScript,  and Git/GitHub for version control.
 
 ### Key Points:
 - **General Setup**: Provides step-by-step instructions for installing, running, and contributing to the project.
