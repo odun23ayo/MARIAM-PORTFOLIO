@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes meal plan</title>
+    <title>Diabetes Meal Plan</title>
     <style>
-        body{
-            font-family: Arial,  sans-serif;
+        body {
+            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             text-align: center;
             display: flex;
@@ -14,7 +14,7 @@
             min-height: 100vh;
             flex-wrap: wrap;
         }
-        header{
+        header {
             background: #2c3e50;
             color: white;
             padding: 20px;
@@ -22,79 +22,79 @@
             font-size: 24px;
             font-weight: bold; 
         }
-        <!-- Add inside <head> -->
-    /* Responsive design tweaks */
-    @media (max-width: 768px) {
-        table, .photo-card, iframe, .chat-container {
-            width: 95% !important;
+        /* Responsive design tweaks */
+        @media (max-width: 768px) {
+            table, .photo-card, iframe, .chat-container {
+                width: 95% !important;
+            }
+            iframe {
+                height: 250px;
+            }
+            header h1 {
+                font-size: 20px;
+            }
+            .chat-container {
+                margin: auto;
+            }
         }
-        iframe {
-            height: 250px;
+        .spell-error {
+            background-color: #ffcccc;
+            border-bottom: 2px solid red;
         }
-        header h1 {
-            font-size: 20px;
-        }
-        .chat-container {
-            margin: auto;
-        }
-    }
-
-    .spell-error {
-        background-color: #ffcccc;
-        border-bottom: 2px solid red;
-    }
-        .content{
+        .content {
             flex: 1;
         } 
-        h2{
+        h2 {
             color: #f2f2f2;
-            background: #2c3e50;
+            background-color: #3498db;
             padding: 15px;
+            border-radius: 5px;
         }
-        table{
+        table {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
             background-color: #fff;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        th, td{
+        th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
         }
-        th{
+        th {
             background-color: #3498db;
             color: white;
         }
-        tr:nth-child(even){
+        tr:nth-child(even) {
             background-color: #f2f2f2;
-        }  
-        .chat-container{
+        }
+        .chat-container {
             width: 350px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             padding: 15px;
+            background-color: #d4edda;
         }
-        .chat-box{
+        .chat-box {
             height: 300px;
             overflow-y: auto;
             border-bottom: 1px solid #ddd;
             padding: 10px;
         }
-        .bot-message, .user-message{
+        .bot-message, .user-message {
             padding: 8px;
             margin: 5px 0;
             border-radius: 5px;
             max-width: 80%;
         }
-        .bot-message{
+        .bot-message {
             background: #d4edda;
             border-left: 5px solid #28a745;
             text-align: left;
         }
-        .user-message{
+        .user-message {
             background: #007bff;
             color: white;
             text-align: right;
@@ -106,341 +106,346 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-top: 10px;
-       }
-       button{
-        padding: 8px;
-        border: none;
-        background: #007bff;
-        color: white;
-        cursor: pointer;
-        margin-top: 10px;
-        border-radius: 5px;
-       }
-       .title{
-        font-size: 18px;
-        font-weight: bold;
-        color: #007bff;
-        text-align: center;
-        margin-bottom: 10px;
-       }
-       @keyframes slideIn{
-        from{
-            transform: translateX(-100%);
-            opacity: 0;
         }
-        to{
-            transform: translateX(0);
-            opacity: 1;
+        button {
+            padding: 8px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
         }
-       }
-       h2{
-        text-align: center;
-        margin-bottom: 20px;
-       }
-       .gallery{
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         gap: 20px;
-       }
-       .photo-card{
-        width: 80%;
-        max-width: 400px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        text-align: center;
-        transition: transform 0.3s;
-       }
-       .photo-card img{
-        width: 100%;
-        height: auto;
-       }
-       .photo-card:hover{
-        transform: scale(1.02);
-       }
-       .siide-text{
-        display: inline-block;
-        font-size: 24px;
-        font-weight: bold;
-        animation: slideIn 1.5s ease-out;
-       }
-        footer{
-            background: #2c3e50;
-            padding: 20px;
-            color:white;
-            margin-top: 20px ;
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
             text-align: center;
-        }  
-        
+            margin-bottom: 10px;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .photo-card {
+            width: 80%;
+            max-width: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .photo-card img {
+            width: 100%;
+            height: auto;
+        }
+        .photo-card:hover {
+            transform: scale(1.02);
+        }
+        .carousel-section {
+            padding: 30px;
+            background-color: #e9f7ef;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .carousel-container {
+            background-color: white;
+            padding: 20px;
+            border-left: 6px solid #28a745;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .education-section {
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tip-card {
+            background: #f0f8ff;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            transition: transform 0.2s ease-in-out;
+        }
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+        .tip-card h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .tip-card p {
+            margin: 0;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <div class="content">
-    <header>
-    <h1 class="slide-text">7-Day Diabetes Meal plan <h1>
-        <nav>
-            <ul>
-                <li>
-                  <a href="home.html">Awareness</a>
-                  <a href="landing.html">Landing page</a>
-                  <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <h2>Photo Gallery of Diabetes Diets</h2>
-    <div class="gallery" id="gallery">
-        <div class="photo-card">
-            <img src="./images/avo.jpeg" alt="avocado">
-            </div>
-            <div class="photo-card">          
-            <img src="./images/beans.jpeg" alt="beans">
+        <header>
+            <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">Awareness</a>
+                        <a href="landing.html">Landing page</a>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h2>Photo Gallery of Diabetes Diets</h2>
+        <div class="gallery" id="gallery">
+            <div class="photo-card">
+                <img src="./images/avo.jpeg" alt="avocado">
             </div>
             <div class="photo-card">
-            <img src="./images/ber.jpeg" alt="">
+                <img src="./images/beans.jpeg" alt="beans">
             </div>
             <div class="photo-card">
-            <img src="./images/broc.jpeg" alt="">
+                <img src="./images/ber.jpeg" alt="berries">
             </div>
             <div class="photo-card">
-            <img src="./images/brown.jpeg" alt="">
+                <img src="./images/broc.jpeg" alt="broccoli">
             </div>
             <div class="photo-card">
-            <img src="./images/cher.jpeg" alt="">
+                <img src="./images/brown.jpeg" alt="brown rice">
             </div>
             <div class="photo-card">
-            <img src="./images/chi.jpg" alt="">
+                <img src="./images/cher.jpeg" alt="cherries">
             </div>
             <div class="photo-card">
-            <img src="./images/chick.jpeg" alt="">
+                <img src="./images/chi.jpg" alt="chia seeds">
             </div>
             <div class="photo-card">
-            <img src="./images/fish.jpg" alt="">
+                <img src="./images/chick.jpeg" alt="chicken">
             </div>
             <div class="photo-card">
-            <img src="./images/lent.jpg" alt="">
+                <img src="./images/fish.jpg" alt="fish">
             </div>
             <div class="photo-card">
-            <img src="./images/nut.jpg" alt="">
+                <img src="./images/lent.jpg" alt="lentils">
             </div>
             <div class="photo-card">
-            <img src="./images/pear.jpeg" alt="">
+                <img src="./images/nut.jpg" alt="nuts">
             </div>
             <div class="photo-card">
-            <img src="./images/wheat.jpeg" alt="">
+                <img src="./images/pear.jpeg" alt="pear">
             </div>
             <div class="photo-card">
-            <img src="./images/spin.jpeg" alt="">
+                <img src="./images/wheat.jpeg" alt="wheat">
             </div>
             <div class="photo-card">
-            <img src="./images/oliv.jpeg" alt="">
+                <img src="./images/spin.jpeg" alt="spinach">
+            </div>
+            <div class="photo-card">
+                <img src="./images/oliv.jpeg" alt="olive oil">
             </div>
         </div>
         <table>
             <tr>
-               <th>Day</th>
-               <th>Breakfast</th>
-               <th>Lunch</th>
-               <th>Snacks</th>
-               <th>Dinner</th>
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Snacks</th>
+                <th>Dinner</th>
             </tr>
             <tr>
-                <td>Monday</td> 
-                <td>Scrambled eggs with 
-                    spinach & whole wheat toast</td>
-                <td>Grilled chicken salad 
-                    with quinoa</td>
+                <td>Monday</td>
+                <td>Scrambled eggs with spinach & whole wheat toast</td>
+                <td>Grilled chicken salad with quinoa</td>
                 <td>Handful of almonds & a small apple</td>
-                <td>Baked salmon with
-                    steamed broccoli & brown rice</td>
+                <td>Baked salmon with steamed broccoli & brown rice</td>
             </tr>
             <tr>
                 <td>Tuesday</td>
-                <td>Oatmeal with walnuts &
-                    a small apple</td>
-                <td>Lentil soup with 
-                    whole grain crackers</td>
-                    <td>Low-fat Greek yogurt with chia seeds</td>
-                <td>Stir-fried tofu with 
-                    mixed vegetables & quinoa</td>
+                <td>Oatmeal with walnuts & a small apple</td>
+                <td>Lentil soup with whole grain crackers</td>
+                <td>Low-fat Greek yogurt with chia seeds</td>
+                <td>Stir-fried tofu with mixed vegetables & quinoa</td>
             </tr>
             <tr>
                 <td>Wednesday</td>
-                <td>Avocado toast with 
-                    boiled egg</td>
-                <td>Turkey wrap in 
-                    whole wheat tortilla</td>
-                    <td>Carrot sticks with hummus</td>
-                <td>Baked  chicken breast with 
-                    roasted sweet potatoes</td>
+                <td>Avocado toast with boiled egg</td>
+                <td>Turkey wrap in whole wheat tortilla</td>
+                <td>Carrot sticks with hummus</td>
+                <td>Baked chicken with roasted sweet potato & spinach</td>
             </tr>
             <tr>
                 <td>Thursday</td>
-                <td>Scrambled eggs with whole wheat toast </td>
-                <td>Grilled fish with brown rice & veggies </td>
-                <td>Handful of walnuts & a small orange</td>
-                <td>Vegetable stir-fry with tofu & quinoa</td>
+                <td>Whole wheat pancakes with blueberries</td>
+                <td>Salmon salad with olive oil dressing</td>
+                <td>Cherries & a handful of walnuts</td>
+                <td>Grilled shrimp with quinoa & roasted zucchini</td>
             </tr>
             <tr>
                 <td>Friday</td>
-                <td>Greek yogurt with almonds & berries</td>
-                <td>chicken & vegetable soup</td>
-                <td>Hard-boiled eggs with a slice of cheese</td>
-                <td>Baked salmon with sauteed spinach & quinoa</td>
+                <td>Chia pudding with mixed berries</td>
+                <td>Grilled chicken with quinoa & steamed broccoli</td>
+                <td>Peanut butter on whole grain crackers</td>
+                <td>Baked turkey with steamed asparagus & wild rice</td>
             </tr>
             <tr>
                 <td>Saturday</td>
-                <td>Oatmeal with walnuts & a small banana </td>
-                <td>Grilled shrimp with avocado salad</td>
-                <td>Cucumber slices with peanut butter</td>
-                <td>steamed vegetables with brown rice</td>
+                <td>Egg white omelet with tomatoes and onions</td>
+                <td>Quinoa salad with beans & avocado</td>
+                <td>Handful of mixed nuts</td>
+                <td>Baked fish with roasted cauliflower & quinoa</td>
             </tr>
             <tr>
                 <td>Sunday</td>
-                <td>Avocado toast with boiled eggs</td>
-                <td>Brown rice with broccoli</td>
-                <td>Handful of mixed nuts & a pear </td>
-                <td>chicken & vegetable soup</td>
+                <td>Greek yogurt with berries & chia seeds</td>
+                <td>Roasted chicken with mixed greens salad</td>
+                <td>Carrot & cucumber sticks with hummus</td>
+                <td>Vegetable stir-fry with brown rice & tofu</td>
             </tr>
         </table>
-        <hr>
-        <section>
-            <iframe width="1056" height="594" src="https://www.youtube.com/embed/ssB5fY5p_Ag" title="World Diabetes Day: Lagos Ministry of Health Initiative Highlights Prevention and Care" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- Educational Tips Section -->
+        <section class="education-section">
+            <h2>🍏 Diabetes Management Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>Monitor Blood Sugar</h3>
+                    <p>Track your blood sugar levels regularly to understand how food and exercise impact your health.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Stay Active</h3>
+                    <p>Physical activity can help control your blood sugar levels and reduce your risk of complications.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Choose Whole Foods</h3>
+                    <p>Include whole grains, vegetables, and lean protein in your meals to maintain healthy blood sugar levels.</p>
+                </div>
+            </div>
         </section>
-        <hr>
-        <section>
-            <h2>Types of Diabetes</h2>
-            <P>Diabetes is defined as an elevated blood sugar, but there are many causes of an elevated blood sugar. 
-                An estimated 25.8 millions Americas have diabetes, with another 79 million considered to have "pre-diabetes."
-                Diabetes is classified into different types, based on its cause.</P>
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Type 1</th>
-                        <th>Type 2</th>
-                        <th>Gestational</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Prevalence</strong></td>
-                        <td>Most common form of diabetes in children (also called "juvenile diabetes"). Accounts for about 5% of adult Diabetes cases.</td>
-                        <td>Most common form of diabetes , representing 90 to 95% of diabetes worldwide.</td>
-                        <td>About 3 to 8% of pregnant women in the U.S. develop this condition .</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cause</strong></td>
-                        <td>An autoimmune disorder, in which the body's immune system mistakenly destroys its insulin-producing cells, making the person unable to produce the insulin that delivers sugar into their cells.</td>
-                        <td>A dual defect of resistance to the action of insulin, combined with an inability to make enough insulin to overcome the resistance.</td>
-                        <td>The hormones of pregnancy or a shortage of insulin.</td>
-                        </tr>
-                </table>
+
+        <!-- Did You Know? Section -->
+        <section class="carousel-section">
+            <h2>🧠 Did You Know?</h2>
+            <div class="carousel-container">
+                <div class="carousel-text" id="carouselText">
+                    Diabetes is one of the leading causes of kidney failure.
+                </div>
+            </div>
         </section>
-        <p class="source"><strong>source:</strong> UCSF Diabetes  center and National Institutes of Health</p>
-    <div class="chat-container">
-        <div class="title">Diabetes Chatbot Risk Checker</div>
-        <div class="chat-box" id="chatBox">
-            <div class="bot-message">Hello! I can check your diabetes risk. Please enter your symptoms (e.g., fatigue, blurry vision).
-             </div>
-             <input type="text" id="userInput" placeholder="Type symptoms here...">
-             <button onclick="SendMessage()">Send</button>
-        </div>
-             </div>
-             <footer>
-                &copy;2025 Diabetes Awareness | All Right Reserved
-             </footer>
-             <script>
-                function SendMessage() {
-    const dictionary = [
-        "frequent", "urination", "excessive", "thirst", "unexplained", "weight", "loss",
-        "increased", "hunger", "fatigue", "blurry", "vision", "slow", "healing",
-        "wounds", "tingling", "numbness", "hands", "feet", "diabetes", "risk", "consult",
-        "doctor", "please", "monitor", "symptoms", "persistent", "low", "moderate", "high"
-    ];
-
-    const inputField = document.getElementById("userInput");
-
-    inputField.addEventListener("input", () => {
-        const text = inputField.value;
-        const words = text.split(/\s+/);
-        const lastWord = words[words.length - 1].toLowerCase();
-
-        // Check spelling
-        if (lastWord && !dictionary.includes(lastWord)) {
-            inputField.classList.add("spell-error");
-        } else {
-            inputField.classList.remove("spell-error");
-        }
-    });
-                    let InputField =
-                    document.getElementById("userInput");
-                    let ChatBox =
-                    document.getElementById("chatBox");
-                    let userText =
-                    InputField.value.trim();
-                    if (userText==="") return;
-                    let userMessage =
-                    document.createElement("div");
-                        userMessage.className ="user-message";
-                        userMessage.innerText = userText;
-                        ChatBox.appendChild(userMessage);
-                        ChatBox.scrollTop = 
-                        ChatBox.scrollHeight;
+                 <!-- Chatbot Section -->
+                <div class="chat-container">
+                    <h2>Diabetes Symptom Checker</h2>
+                    <div class="chat-box" id="chatBox"></div>
+                    <input type="text" id="userInput" placeholder="Type your symptoms or ask about risks..." />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            <script>
+                const diabetesSymptoms = [
+                    "Increased thirst and frequent urination",
+                    "Fatigue or feeling extremely tired",
+                    "Blurry vision",
+                    "Slow-healing sores or cuts",
+                    "Unexplained weight loss",
+                    "Frequent infections, especially urinary tract infections",
+                    "Numbness or tingling in hands or feet"
+                ];
+        
+                const diabetesRisks = [
+                    "Family history of diabetes (parents or siblings)",
+                    "Being overweight or obese, especially with belly fat",
+                    "A sedentary lifestyle with little physical activity",
+                    "Having high blood pressure (hypertension)",
+                    "Having high cholesterol or triglyceride levels",
+                    "History of gestational diabetes (during pregnancy)",
+                    "Age over 45, although younger adults may also be at risk"
+                ];
+        
+                // Responses for specific keywords
+                const responses = {
+                    symptoms: "The common symptoms of diabetes include: \n" + diabetesSymptoms.join("\n"),
+                    risks: "The major risk factors for diabetes include: \n" + diabetesRisks.join("\n"),
+                    mealPlan: "I can provide you with a 7-day diabetes meal plan! Would you like to know more?",
+                    default: "I'm here to help! Ask me about diabetes symptoms, risks, or meal plans."
+                };
+        
+                function sendMessage() {
+                    const userInput = document.getElementById("userInput").value.toLowerCase();
+                    const chatBox = document.getElementById("chatBox");
+        
+                    if (userInput) {
+                        chatBox.innerHTML += `<div class="user-message">${userInput}</div>`;
+                        document.getElementById("userInput").value = '';
+        
                         setTimeout(() => {
-                            let botReply =
-                            checkSymptoms(userText);
-                            let botMessage =
-                            document.createElement("div");
-                            botMessage.className = "bot-message";
-                            botMessage.innerText = botReply;
-                            ChatBox.appendChild(botMessage);
-                            ChatBox.scrollTop =
-                            ChatBox.scrollHeight;
-                        },1000);
-                        InputField.value ="";
-                        }
-                        function checkSymptoms(input) {
-                            let userSymptoms =
-                            input.toLowerCase().split(',').map(symptom => symptom.trim())
-                            let diabetesSymptoms =[
-                                "frequent urination",
-                                "excessive thirst",
-                                "unexplained weight loss",
-                                "increased hunger",
-                                "fatigue",
-                                "blurry vision",
-                                "slow healing wounds",
-                                "tingling or numbness in hands or feet"
-                            ];
-                            let matches =
-                            userSymptoms.filter(symptom => diabetesSymptoms.includes(symptom));
-                            let resultText ="";
-                            if (matches.length >= 5) {
-                               resultText ="! High risk of diabetes. Please consult a doctor.";
-                            } else if(matches.length >= 2)
-                            {
-                              resultText = "! moderate risk. Monitor your symptoms and seek medical advice if they persist.";
-                            } else{
-                              resultText = "Low risk. However, if you're concerned, consult a doctor."
+                            let botResponse = responses.default;
+                            let riskLevel = '';
+        
+                            if (userInput.includes("symptoms")) {
+                                botResponse = responses.symptoms;
+                            } else if (userInput.includes("risks")) {
+                                botResponse = responses.risks;
+                            } else if (userInput.includes("meal plan") || userInput.includes("meal")) {
+                                botResponse = responses.mealPlan;
+                            } else {
+                                // Analyze risk level based on user input
+                                const symptomsCount = diabetesSymptoms.filter(symptom => userInput.includes(symptom.toLowerCase())).length;
+                                const risksCount = diabetesRisks.filter(risk => userInput.includes(risk.toLowerCase())).length;
+        
+                                if (symptomsCount >= 4 || risksCount >= 4) {
+                                    riskLevel = "High Risk: You may be at a higher risk of diabetes based on your symptoms and/or risk factors. It's advised to consult a healthcare provider.";
+                                } else if (symptomsCount >= 2 || risksCount >= 2) {
+                                    riskLevel = "Moderate Risk: You may have a moderate risk of diabetes. Consider making lifestyle changes and monitoring your health.";
+                                } else {
+                                    riskLevel = "Low Risk: Your symptoms and risk factors indicate a low risk of diabetes, but it's important to stay healthy and monitor your health regularly.";
+                                }
+        
+                                botResponse = `Based on your input: \n\n${riskLevel}`;
                             }
-                            return resultText;
-                        }
-                        const cards = document.querySelectorAll('photo-card');
-                        let current = 0 ;
-                        function showOnly(index) { cards.forEach((card,i) =>
-                        {
-                        card.style.display = i === index ? 'block' : 'none';
-                    });   
-                        }
-                        showOnly(current);
-                        setInterval(() =>{
-                            current =(current + 1) %
-                            cards.length;
-                            showOnly(current);
-                        },4000);
-
-             </script>
-
-     
+        
+                            chatBox.innerHTML += `<div class="bot-message">${botResponse}</div>`;
+                            chatBox.scrollTop = chatBox.scrollHeight;
+                        }, 1000);
+                    }
+                }
+            </script>
+    <footer>
+        &copy;2025 Diabetes Awareness | All Right Reserved
+    </footer>
 </body>
 </html>
