@@ -1,136 +1,201 @@
-*{
-    box-sizing: border-box;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* light background for contrast */
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+header {
+ /* blue background */
+    color:black;
+    padding: 10px 20px;
 }
-.head{
-    padding:1rem;
+
+header .heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    list-style: none;
 }
 
-h1,h2{
-  text-align: center;
-  color: #3498db;
-}
-.small-logo{
+header .small-logo {
     width: 50px;
     height: auto;
-    border-radius:100px;
-}
-.heading{
-    display: flex;
-    gap: 1rem; 
-    padding: 10px;
-    align-items: center;
-}
-.but{
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    background-color: #3498db;
-    padding: 10px;
-}
-.but:hover{
-    background-color: darkmagenta;
-}
-/*aside{
-    flex: 1;
-    text-align: right;
-    padding-right: 20px;
-}*/
-.track{
-    margin-bottom: 20px ;
-    padding: 15px;
-    margin:10px ;
-    background:white;
-    border-radius: 10px;
-    border: 2px solid lightskyblue;
-    box-shadow: 0px 0px 10px #3498db;
-    transition: ease-in-outss ;
-}
-.track button{
-    margin-top: 10px;
-    padding: 15px;
-    background-color: #8e44ad;
-    color:black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-decoration: none;
-}
-.track button:hover{
-    background-color: #3498db;
-    transform: scale3d(1.05);
-}
-.page{
-    text-align: center;
-    align-items: center;
-    margin: 10px;
-}
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    flex: 1;
+    margin-right: 10px;
+    border-radius: 50px;
 }
 
-.foot{
-    padding: 20px 200px;
-    text-align: center;
-    background: #2c3e50;
-    color: white;
-    margin-top: 600px;
+header .logo {
+    font-size: 1.8em;
 }
- h3.logo{
- color:#3498db;
- }
- .navy ul{
+
+nav ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-    list-style:none ;
- }
- a {
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color:black; /* blue hover text color */
     text-decoration: none;
-    color: aliceblue;
-    color: black;
- }
-.section1{
-    align-items: center;
-    text-align: center;
-    text-decoration: underline;
-    color: #3498db;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
-.section2{
-    height: 50px;
-    padding-bottom: 20px;
+
+nav ul li a:hover {
+    color: #2980b9; /* darker blue for hover */
 }
-.image-container{
-   /* background-color: #3498db;*/
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+form input, form button {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Sections */
+section {
     padding: 20px;
-    width: fit-content;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #3498db;
 }
-.doctor-image{
-    max-width: 300px;
-    border-radius: 10px;
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #3498db; /* blue heading color */
 }
-@media (max-width) {
-    
+
+h2 {
+    font-size: 1.8em;
+    color: #3498db; /* blue subheading color */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.track {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+    background-color: white;
+    color: #3498db; /* blue text color */
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px #3498db;
+    border: #3498db solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.track button, .button-link {
+    padding: 10px 20px;
+    background-color: #3498db; /* blue button background */
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover, .button-link:hover {
+    background-color: #2980b9; /* darker blue for hover */
+}
+
+footer {
+    background-color: #333; /* blue footer background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header .heading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .track {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input, form button {
+        width: 80%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .track button, .button-link {
+        width: 100%;
+        padding: 15px;
+    }
+
+    nav ul {
+        padding-left: 0;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
 }
