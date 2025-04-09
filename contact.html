@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact form</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f4f4;
             text-align: center;
             padding: 20px;
         }
-        p{
+        p {
             color: #007BFF;
         }
-        .container{
+        .container {
             padding: 20px;
             max-width: 400px;
             margin: auto;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0,0,0.1,);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             flex-wrap: wrap;
+            background-color: white;
         }
-        input,textarea{
+        input, textarea {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -37,35 +38,85 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-
         }
-        button:hover{
+        button:hover {
             background-color: #0056b3;
         }
-
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #007BFF;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+        /* Loading Spinner */
+        .loading {
+            display: none;
+            margin-top: 20px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007BFF;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
-    <link rel="style.sheet" href="">
 </head>
 <body>
     <div class="container">
-    <h2>Contact Me - Diabetes Awareness</h2>
-    <p>Have any questions or need help ? Fill out the form below:</p>
-    <form action="submit_form.php" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="text" name="email" placeholder="Your Email" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form><br>
-    <div class="social-icons">
-     Phone: +2348109466440<br>
-     <br>
-     Email: Mariamadekunle883@gmail.com
-     <p>
-    <a href="https://wa.me/2347013527581" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        </a>
+        <h2>Contact Me - Diabetes Awareness</h2>
+        <p>Have any questions or need help? Fill out the form below:</p>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="loading" id="loadingMessage">
+            <p>Submitting your message...</p>
+            <div class="spinner"></div>
+        </div>
+
+        <div class="social-icons">
+            <p>Phone: +2348109466440</p>
+            <p>Email: Mariamadekunle883@gmail.com</p>
+            <a href="https://wa.me/2347013527581" target="_blank">
+                <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+            </a>
+        </div>
     </div>
-    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form submission
+            showLoading();  // Show the loading spinner
+
+            // Simulate an asynchronous form submission using fetch
+            setTimeout(function() {
+                // After a successful "submission", hide the spinner
+                document.getElementById("loadingMessage").style.display = "none";
+                alert("Message submitted successfully!");
+                document.getElementById("contactForm").reset();  // Optionally reset the form
+            }, 2000);  // Simulate a delay (e.g., 2 seconds)
+        });
+
+        function showLoading() {
+            // Hide the form and show the loading spinner
+            document.getElementById("contactForm").style.display = "none";
+            document.getElementById("loadingMessage").style.display = "block";
+        }
+    </script>
 </body>
 </html>

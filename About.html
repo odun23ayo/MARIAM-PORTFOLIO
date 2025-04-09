@@ -6,7 +6,7 @@
     <title>About Me</title>
     <style>
     body{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f5f5f5;
@@ -176,6 +176,11 @@
     .portfolio-item img:hover{
         transform: scale(1.1);
     }
+    .small-pic{
+        width: 50px;
+        height: auto;
+        border-radius: 100px;
+    }
     footer{
         text-align: center;
         padding: 20px;
@@ -203,16 +208,62 @@
             max-width: 100%;
             text-align: center;
         }
-    } 
+        .contact-btn{
+            width: 100%;
+            text-align: center;
+        }
+    }
+        @media (max-width: 768px) {
+    header {
+        padding: 15px 30px; /* Adjust padding for small screens */
+    }
+
+    nav ul {
+        flex-direction: column;  /* Stack the nav items vertically */
+        align-items: center;     /* Center the items */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;          /* Add margin for spacing between items */
+    }
+
+    .contact-btn {
+        width: 100%;             /* Make the contact button full width */
+        text-align: center;      /* Center the text inside the button */
+        padding: 12px 0;         /* Adjust padding for mobile */
+    }
+
+    nav ul li a {
+        padding: 12px 20px;      /* Increase padding for easier tapping */
+        font-size: 18px;         /* Increase font size for readability */
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-btn {
+        width: 100%;             /* Ensure the contact button is full width */
+        margin-top: 15px;        /* Add margin to separate from other elements */
+    }
+
+    nav ul {
+        margin-top: 20px;        /* Add margin at the top for spacing */
+    }
+    
+    nav ul li a {
+        font-size: 16px;         /* Adjust font size for small screens */
+    }
+}
     </style>
 </head>
 <body>
     <header>
+        <img src="./images/one diabetes.jpg" class="small-pic">
             <h1>Adekunle</h1>
         <nav>
             <ul>
                 <li><a href="landing.html">Landing Page</a></li>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="Awareness.html">Awareness page</a></li>
                 <li><a href="#">About Me</a></li>
                 <li><a href="contact.html" class="contact-btn">Contact</a></li>
             </ul>
@@ -288,7 +339,7 @@
           <h2>Resources</h2>
           <p>Here are some of my recent projects:</p>
          <div class="portfolio-grid">
-            <div class="portfolio-item"><img src="./m.jpg" alt="work 1"></div> 
+            <div class="portfolio-item"><img src="./images/one dia.jpeg" alt="work 1"></div> 
             <div class="portfolio-item"><img src="./images/one diabetes.jpg" alt="healthy"></div>
             <div class="portfolio-item"><img src="./images/type.jpg" alt="exercise"></div>
          </div>
