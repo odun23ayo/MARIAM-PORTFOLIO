@@ -2,11 +2,12 @@
 # Diabetes Awareness Website
 This project aims to educate the public about diabetes, its risks, symptoms, prevention, and management. The website provides insightful information across multiple sections to promote awareness and healthy living.
 ## Table of Contents
-- [Landing Page](#landing-page)
 - [Home Page](#home-page)
+- [Awareness Page](#awareness-page)
 - [About Page](#about-page)
 - [Contact Page](#contact-page)
 - [Features](#features)
+- [Technolgies](#Technologies used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -37,6 +38,12 @@ The contact page allows users to reach out for inquiries, feedback, or support. 
 - **Educational Resources**: Offers comprehensive articles and guides on diabetes awareness.
 - **Interactive Tools**: Includes quizzes and calculators to help users assess their health risks.
 - **Community Engagement**: Features a blog and forum for users to share experiences and support each other.
+### Key Points:
+- **Technologies Used**: The section lists the main technologies used in the project like HTML, CSS, JavaScript, Node.js, and Git/GitHub for version control.
+- **General Setup**: Provides step-by-step instructions for installing, running, and contributing to the project.
+
+Let me know if you'd like to modify or add anything!
+
 ## Installation
 To set up the project locally, follow these steps:
 1. **Clone the Repository**:
