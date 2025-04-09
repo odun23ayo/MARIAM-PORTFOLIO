@@ -131,6 +131,6 @@ h1,h2{
     max-width: 300px;
     border-radius: 10px;
 }
-@media  {
+@media (max-width) {
     
 }
