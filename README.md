@@ -7,7 +7,7 @@ This project aims to educate the public about diabetes, its risks, symptoms, pre
 - [About Page](#about-page)
 - [Contact Page](#contact-page)
 - [Features](#features)
-- [Technolgies](#Technologies used)
+- [Technolgies](#Technologies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -38,11 +38,11 @@ The contact page allows users to reach out for inquiries, feedback, or support. 
 - **Educational Resources**: Offers comprehensive articles and guides on diabetes awareness.
 - **Interactive Tools**: Includes quizzes and calculators to help users assess their health risks.
 - **Community Engagement**: Features a blog and forum for users to share experiences and support each other.
-### Key Points:
-- **Technologies Used**: The section lists the main technologies used in the project like HTML, CSS, JavaScript, Node.js, and Git/GitHub for version control.
-- **General Setup**: Provides step-by-step instructions for installing, running, and contributing to the project.
 
-Let me know if you'd like to modify or add anything!
+### Technologies Used: The section lists the main technologies used in the project like HTML, CSS, JavaScript,  and Git/GitHub for version control.
+
+### Key Points:
+- **General Setup**: Provides step-by-step instructions for installing, running, and contributing to the project.
 
 ## Installation
 To set up the project locally, follow these steps:
