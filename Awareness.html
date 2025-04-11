@@ -215,14 +215,68 @@
         .tip-card p {
             margin: 0;
             color: #333;
-        }
-    </style>
+            }
+            .arrow-navigation {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+.arrow-navigation:hover {
+    transform: rotate(180deg);
+}
+
+.arrow-links {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 60px; /* Position below the header */
+    left: 20px;
+    background-color: #3498db;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.arrow-links a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.arrow-links a:hover {
+    background-color: #2980b9;
+}
+
+
+            
+            </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
     <div class="content">
         <header>
             <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
+            <!-- Arrow navigation icon -->
+            <div class="arrow-navigation" onclick="toggleLinks()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            
+            <!-- Links for pages -->
+            <div class="arrow-links">
+                <a href="Awareness.html">Page 1</a>
+                <a href="landing.html">Page 2</a>
+                <a href="About.html">Page 3</a>
+            </div>
+
         </header>
         <h2>Photo Gallery of Diabetes Diets</h2>
         <div class="gallery" id="gallery">
@@ -470,6 +524,19 @@ setInterval(rotateFacts, 5000);
 
 // Call the function initially to display the first fact
 rotateFacts();
+function toggleLinks() {
+    const arrowLinks = document.querySelector('.arrow-links');
+    const isVisible = arrowLinks.style.display === 'block';
+
+    // Toggle visibility with animation
+    arrowLinks.style.display = isVisible ? 'none' : 'block';
+    arrowLinks.style.opacity = isVisible ? '0' : '1'; // Fade in/out effect
+
+    // Change arrow direction when links are visible
+    const arrowIcon = document.querySelector('.arrow-navigation i');
+    arrowIcon.classList.toggle('fa-arrow-left');
+    arrowIcon.classList.toggle('fa-arrow-right');
+}
 
             </script>
     <footer>
