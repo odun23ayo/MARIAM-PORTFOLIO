@@ -1,87 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enlighment On Diabetes</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enlightenment on Diabetes</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Working Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <header class="head">
-        <div class="heading">
-        <img src="./images/IMG-20250407-WA0009.jpg" alt="logo" class="small-logo">
-        <h3 class="logo">MAVERICK</h3>
-        </div>
-        <nav class="navy">
-            <ul>
-                <li><a href="About.html">
-                     About Page</a></li>
-                <li><a href="#about">
-                     Purpose</a></li>
-                <li><a href="contact.html">
-                     contact</a></li>
-                     <li><a href="Awareness.html">Awareness Page</a></li>
-                <form action="https://www.cdc.gov/diabetes/index.html"  
-                method="get"> 
-                    <input type="text" 
-                    placeholder="More info on diabetes..."
-                     onkeyup="searchFunction()" 
-                     name="query" required>
-                    <button type="submit" 
-                     class="but">Search</button>
-                </form>
 
-            </ul>
-        </nav>
-    </header>
-    <section class="section1">
-        <bold><h1>DIABETES ENLIGHTMENT OF THE PUBLIC</h1></bold>
-    </section>
-    <section class="section2">
-        <p class="page"><large>Welcome to this wonderful page where you get more knowledge on  the above  topic which is <em>Diabetes</em>
-            </large>
-        </p>
-        <aside>
-        <div class="image-container">
-            <img src="./images/doc.jpg" alt="doctor" class="doctor-image"> 
-        </div>
-        </aside>
-        <div class="container">
+  <!-- Header Section -->
+  <header class="head">
+    <div class="heading">
+      <img src="./images/IMG-20250407-WA0009.jpg" alt="Maverick Logo" class="small-logo" />
+      <h1 class="logo">MAVERICK</h1>
+    </div>
 
-            <div class="track" id="stages">
-            <h2>Stages Of Diabetes</h2>
-            <p>Diabetes develops in several stages , each with distinct symptoms and complications. 
-               It's important to understand these stages for better management.
-            </p>
-            <button><a href="home.html"></a>Learn More</button>
-            </div><br>
+    <nav class="navy">
+      <ul class="nav-links">
+        <li><a href="About.html">About</a></li>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Awareness.html">Awareness</a></li>
+      </ul>
+      <form action="https://www.cdc.gov/diabetes/index.html" method="get" class="search-form">
+        <input type="text" name="query" placeholder="More info on diabetes..." required />
+        <button type="submit" class="but">Search</button>
+      </form>
+    </nav>
+  </header>
 
-        <div class="track" id="about-author">
-            <h2>About the Author</h2>
-            <p>This page is created by a health professional passionate about spreading awareness about diabetes. 
-               The author has years of experience in managing diabetes patients.</p>
-                <button><a href="About.html" >More Info</a></button>
-        </div>
+  <!-- Hero Section -->
+  <section class="section1">
+    <h2><i class="fas fa-lightbulb" style="color: goldenrod;"></i> Diabetes Enlightenment for the Public <i class="fas fa-book-open" style="color: brown;"></i></h2>
+  </section>
 
-        <div class="track" id="about">
-            <h2>What to eat </h2>
-         <p>Managing diabetes through a balanced diet is essential . 
-            Learn about the foods that can help manage blood sugar levels effectively.</p>
-            <button><a href="home.html">Healthy Eating Tips </a></button>
-        </div><br>
-
-        <div class="track" id="about">
-            <h2>Causes of Diabetes</h2>
-         <p>Diabetes can be caused by a variety of factors including genetics, lifestyle, choices, and environmental influences. 
-            It's crucial to understand these causes for prevention.</p>
-            <button><a href="home.html">Discover Causes</a></button>
-        </div>
-        </div>
-    </section>
- <footer class="foot">
-    <p class="enny">
-        &copy;2025 MAVERICK | All Rights Reserved<br>
+  <!-- Introduction -->
+  <section class="section2">
+    <p class="page">
+      Welcome to this informative space where you can gain valuable knowledge about <em>Diabetes</em>.
     </p>
- </footer>
+    <div class="image-container">
+      <img src="./images/doc.jpg" alt="Doctor image" class="doctor-image" />
+      
+      <!-- Health-related icons -->
+      <div class="health-icons">
+        <i class="fas fa-stethoscope" style="color: rgb(36, 162, 166);" ></i>
+        <i class="fas fa-heart" style="color: rgb(247, 9, 9);"></i>
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-apple-alt" style="color: rgb(22, 227, 22);"></i>
+      </div>
+    </div>        
+    <!--<div class="image-container">
+      <img src="./images/doc.jpg" alt="Doctor image" class="doctor-image" />
+      <p><i class="fas fa-user-md"></i> Certified Health Professional</p>
+    </div>-->
+
+    <!-- Content Sections -->
+    <div class="container">
+
+      <!-- Stages of Diabetes -->
+      <div class="track" id="stages">
+        <h3><i class="fas fa-thermometer-half" style="color: red;"></i> Stages of Diabetes</h3>
+        <p>
+          Diabetes develops in several stages, each with distinct symptoms and complications.
+          Understanding these stages is key to better management and care.
+        </p>
+        <a href="Awareness.html" class="btn">Learn More</a>
+      </div>
+
+      <!-- About the Author -->
+      <div class="track" id="about-author">
+        <h3><i class="fas fa-user-nurse" style="color: pink;"></i> About the Author</h3>
+        <p>
+          This page is created by a passionate health professional with years of experience
+          in managing diabetes and spreading awareness to the public.
+        </p>
+        <a href="About.html" class="btn">More Info</a>
+      </div>
+
+      <!-- What to Eat -->
+      <div class="track" id="purpose">
+        <h3><i class="fas fa-apple-alt" style="color: green;"></i> What to Eat</h3>
+        <p>
+          A balanced diet is essential in managing diabetes. Learn about food choices that
+          help regulate blood sugar levels effectively.
+        </p>
+        <a href="Awareness.html" class="btn">Healthy Eating Tips</a>
+      </div>
+
+      <!-- Causes of Diabetes -->
+      <div class="track" id="causes">
+        <h3><i class="fas fa-dna" style="color: blueviolet;"></i> Causes of Diabetes</h3>
+        <p>
+          Factors such as genetics, lifestyle, and environment contribute to diabetes.
+          Understanding the causes helps in prevention and early intervention.
+        </p>
+        <a href="Awareness.html" class="btn">Discover Causes</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <p class="enny">&copy; 2025 MAVERICK | All Rights Reserved</p>
+  </footer>
+
 </body>
 </html>

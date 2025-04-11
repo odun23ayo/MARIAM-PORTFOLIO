@@ -13,7 +13,7 @@ This project aims to educate the public about diabetes, its risks, symptoms, pre
 - [Contributing](#contributing)
 - [License](#license)
 ## Landing Page
-![alt text](image.png)
+![alt text](image-1.png)
 The landing page serves as the entry point to the website, offering an overview of the project's mission and guiding users to various sections. It includes:
 - **Header**: Contains the website logo and navigation links.
 - **Hero Section**: Features a welcome message and an introduction to the website's purpose.

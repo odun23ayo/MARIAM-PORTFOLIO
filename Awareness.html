@@ -217,20 +217,12 @@
             color: #333;
         }
     </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
     <div class="content">
         <header>
             <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="Awareness.html">Awareness</a>
-                        <a href="landing.html">Landing page</a>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
         </header>
         <h2>Photo Gallery of Diabetes Diets</h2>
         <div class="gallery" id="gallery">
@@ -443,6 +435,28 @@
                         }, 1000);
                     }
                 }
+                // Array of facts to display in the carousel
+const facts = [
+    "Diabetes is one of the leading causes of kidney failure.",
+    "Proper nutrition can help manage diabetes effectively.",
+    "Regular physical activity can improve insulin sensitivity.",
+    "Monitoring blood sugar levels is crucial for managing diabetes."
+];
+
+// Function to rotate the text in the carousel
+let factIndex = 0;
+function rotateFacts() {
+    const carouselText = document.getElementById("carouselText");
+    carouselText.textContent = facts[factIndex];
+    factIndex = (factIndex + 1) % facts.length; // Loop back to the first fact after reaching the last one
+}
+
+// Set the fact rotation interval (e.g., every 5 seconds)
+setInterval(rotateFacts, 5000);
+
+// Call the function initially to display the first fact
+rotateFacts();
+
             </script>
     <footer>
         &copy;2025 Diabetes Awareness | All Right Reserved
