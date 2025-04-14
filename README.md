@@ -2,7 +2,7 @@
 # Diabetes Awareness Website
 This project aims to educate the public about diabetes, its risks, symptoms, prevention, and management. The website provides insightful information across multiple sections to promote awareness and healthy living.
 ## Table of Contents
-- [Home Page](#home-page)
+- [Landing Page](#landing-page)
 - [Awareness Page](#awareness-page)
 - [About Page](#about-page)
 - [Contact Page](#contact-page)
