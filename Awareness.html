@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Meal Plan</title>
     <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -28,6 +33,7 @@ html {
             text-align: center;
             font-size: 24px;
             font-weight: bold; 
+            margin-bottom: 15px;
         }
         /* Responsive design tweaks */
         @media (max-width: 768px) {
@@ -76,6 +82,10 @@ html {
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+       /* th, td {
+    word-wrap: break-word;
+    word-break: break-word;
+}*/
        /* .bot-container {
             width: 350px;
             background: white;
@@ -153,20 +163,104 @@ html {
     gap: 20px;
     padding: 0 20px;
     justify-items: center;
+    margin-top: 15px;
+}
+.photo-card {
+    transition: transform 0.3s ease;
+}
+.photo-card:hover {
+    transform: scale(1.05);
 }
 .photo-card {
     opacity: 0;
     transform: translateX(100%);
     animation: slideInFromRight 0.8s ease-out forwards;
 }
+.chat-box {
+    word-break: break-word;
+}
 .photo-card:nth-child(1) { animation-delay: 0.1s; }
 .photo-card:nth-child(2) { animation-delay: 0.2s; }
 /* and so on... */
         .photo-card img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .photo-card p {
+        font-size: 14px;
+    }
+
+    .carousel-container, .bot-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .arrow-links {
+        width: 90%;
+        left: 5%;
+    }
+
+    .arrow-navigation {
+        top: 10px;
+        left: 10px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .arrow-links {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .arrow-navigation {
+        font-size: 20px;
+    }
+}
+@media (max-width: 500px) {
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
         @keyframes slideInFromRight{
             0%{
                 transform: translateX(100%);
@@ -190,11 +284,12 @@ html {
             border-radius: 8px;
             max-width: 600px;
             margin: auto;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             color: #2c3e50;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1s ease-in-out;
+            margin-top: 15px;
         }
         @keyframes fadeIn {
             from {
@@ -292,7 +387,11 @@ html {
 .arrow-links a:hover {
     background-color: #2980b9;
 }
-
+footer{
+    background-color: #5a9bd8;
+    margin: 20px;
+    padding: 20px;
+}
 
             
             </style>
@@ -592,17 +691,28 @@ function rotateFacts() {
     carouselText.textContent = facts[factIndex];
     factIndex = (factIndex + 1) % facts.length; // Loop back to the first fact after reaching the last one
 }
-const btn = document.getElementById("backToTop");
-  window.onscroll = () => {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    function toggleLinks() {
+        const links = document.querySelector(".arrow-links");
+        links.style.display = links.style.display === "block" ? "none" : "block";
     }
-  };
-  btn.onclick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+
 // Set the fact rotation interval (e.g., every 5 seconds)
 setInterval(rotateFacts, 5000);
 
