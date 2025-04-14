@@ -11,6 +11,9 @@
         padding: 0;
         background-color: #f5f5f5;
     }
+    html {
+  scroll-behavior: smooth;
+}
     header{
        display: flex;
        justify-content: space-between;
@@ -43,6 +46,11 @@
         padding: 10px 15px;
         transition: 0.3s;
     }
+    nav ul li a.active {
+    color: #8e44ad;
+    border-bottom: 2px solid #8e44ad;
+}
+
     .contact-btn{
         background: #8e44ad;
         color: white !important;
@@ -162,12 +170,11 @@
         text-align: center;
         padding: 60px 10%;
     }
-    .portfolio-grid{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
+    .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
     .portfolio-item img {
         width: 200px;
         border-radius: 10px;
@@ -208,6 +215,11 @@
             max-width: 100%;
             text-align: center;
         }
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
         .contact-btn{
             width: 100%;
             text-align: center;
@@ -238,7 +250,12 @@
         padding: 12px 20px;      /* Increase padding for easier tapping */
         font-size: 18px;         /* Increase font size for readability */
     }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
+
 
 @media (max-width: 600px) {
     .contact-btn {
@@ -255,6 +272,7 @@
     }
 }
     </style>
+    <link rel="icon" type="image/png" href="./images/one diabetes.jpg">
 </head>
 <body>
     <header>
@@ -264,7 +282,7 @@
             <ul>
                 <li><a href="landing.html">Landing Page</a></li>
                 <li><a href="Awareness.html">Awareness page</a></li>
-                <li><a href="#">About Me</a></li>
+                <li><a href="#" class="active">About Me</a></li>
                 <li><a href="contact.html" class="contact-btn">Contact</a></li>
             </ul>
         </nav>
@@ -309,7 +327,7 @@
          <div>
             <h2>Why I Decided To Write A Page On Diabetes </h2>
              <p><strong>Diabetes</strong> is a major  health concern , and despite extensive research, a cure has not yet been found. Millions of lives are affected daily.</p>
-             <p>While awareness campaigns exist, I believe we need **more educational resources* to help people understand diabetes prevention and management.</p>
+             <p>While awareness campaigns exist, I believe we need **more educational resources** to help people understand diabetes prevention and management.</p>
              <p>Through my website, I will share **guidelines and tips** that promote a healthier lifestyle and reduce diabetes risks. Follow my page for **insight on living a diabetes-conscious life** </p>
       </div>
         </div>
@@ -348,6 +366,6 @@
     <footer>
      &copy; 2025 DiabetesCare | All Rights Reserved
     </footer>
-    <!--<script src="script.js"></script>-->
+    <script src="script.js"></script>
 </body>
 </html>

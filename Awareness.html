@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="A responsive and interactive diabetes meal plan webpage with educational tips, chatbot, and photo gallery.">
+    <meta name="keywords" content="diabetes meal plan, healthy food, diabetes tips, diabetic diet">
+    <meta name="author" content="Adekunle Mariam">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Meal Plan</title>
@@ -12,8 +15,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            flex-wrap: wrap;
-        }
+  animation: fadeIn 0.8s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
+
         header {
             background: #2c3e50;
             color: white;
@@ -33,7 +40,7 @@
             header h1 {
                 font-size: 20px;
             }
-            .chat-container {
+            .bot-container {
                 margin: auto;
             }
         }
@@ -69,14 +76,21 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        .chat-container {
+       /* .bot-container {
             width: 350px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             padding: 15px;
             background-color: #d4edda;
-        }
+        }*/
+        .bot-container {
+  background: linear-gradient(135deg, #d0eaff, #ffffff);
+  border: 2px solid #5a9bd8;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(90, 155, 216, 0.3);
+}
         .chat-box {
             height: 300px;
             overflow-y: auto;
@@ -133,28 +147,35 @@
                 opacity: 1;
             }
         }
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .photo-card {
-            width: 80%;
-            max-width: 400px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s;
-        }
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    justify-items: center;
+}
+.photo-card {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInFromRight 0.8s ease-out forwards;
+}
+.photo-card:nth-child(1) { animation-delay: 0.1s; }
+.photo-card:nth-child(2) { animation-delay: 0.2s; }
+/* and so on... */
         .photo-card img {
             width: 100%;
-            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .photo-card:hover {
-            transform: scale(1.02);
+        @keyframes slideInFromRight{
+            0%{
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
         .carousel-section {
             padding: 30px;
@@ -251,7 +272,23 @@
     text-decoration: none;
     font-size: 16px;
 }
-
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007BFF;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+#backToTop:hover {
+  background-color: #0056b3;
+}
 .arrow-links a:hover {
     background-color: #2980b9;
 }
@@ -276,8 +313,8 @@
                 <a href="landing.html">Page 2</a>
                 <a href="About.html">Page 3</a>
             </div>
-
         </header>
+        <button id="backToTop">↑</button>
         <h2>Photo Gallery of Diabetes Diets</h2>
         <div class="gallery" id="gallery">
             <div class="photo-card">
@@ -306,6 +343,7 @@
             </div>
             <div class="photo-card">
                 <img src="./images/chi.jpg" alt="chia seeds">
+                <p>Turkey</p>
             </div>
             <div class="photo-card">
                 <img src="./images/chick.jpeg" alt="chicken">
@@ -333,13 +371,15 @@
             </div>
             <div class="photo-card">
                 <img src="./images/spin.jpeg" alt="spinach">
-                <p>Spinach</p><i class="far fa-spinach"></i>
+                <p></p><p>Spinach 🥬</p>
+
             </div>
             <div class="photo-card">
                 <img src="./images/oliv.jpeg" alt="olive oil">
                 <p>Olive</p>
             </div>
         </div>
+        <div style="overflow-x:auto;">
         <table>
             <tr>
                 <th>Day</th>
@@ -398,7 +438,7 @@
                 <td>Vegetable stir-fry with brown rice & tofu</td>
             </tr>
         </table>
-
+        </div>
         <!-- Educational Tips Section -->
         <section class="education-section">
             <h2>🍏 Diabetes Management Tips</h2>
@@ -428,7 +468,7 @@
             </div>
         </section>
                  <!-- Chatbot Section -->
-                <div class="chat-container">
+                <div class="bot-container">
                     <h2>Diabetes Symptom Checker 🧫</h2>
                     <div class="chat-box" id="chatBox"></div>
                     <input type="text" id="userInput" placeholder="Type your symptoms or ask about risks..." />
@@ -493,16 +533,44 @@
                                     riskLevel = "Moderate Risk: You may have a moderate risk of diabetes. Consider making lifestyle changes and monitoring your health.";
                                 } else {
                                     riskLevel = "Low Risk: Your symptoms and risk factors indicate a low risk of diabetes, but it's important to stay healthy and monitor your health regularly.";
-                                }
-        
-                                botResponse = `Based on your input: \n\n${riskLevel}`;
-                            }
-        
-                            chatBox.innerHTML += `<div class="bot-message">${botResponse}</div>`;
+                                } 
+                                function getRiskEmoji(riskLevel) {
+  if (riskLevel === "low") return "✅😊";
+  if (riskLevel === "moderate") return "⚠️🤔";
+  if (riskLevel === "high") return "🚨😟";
+}
+function speak(text) {
+    const msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
+}
+
+if (riskLevel) {
+    speak(riskLevel);
+}
+                            const suggestions = {
+  "thirsty": "Persistent thirst can be a symptom of high blood sugar.",
+  "tired": "Feeling tired often may indicate insulin resistance."
+};
+
+function checkInput(input) {
+  for (let key in suggestions) {
+    if (input.toLowerCase().includes(key)) {
+      return suggestions[key];
+    }
+  }
+  return "";
+}
+      chatBox.innerHTML += `<div class="bot-message">${botResponse}</div>`;
                             chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                    }
-                }
+                        }
+                                    // Auto delete after 10 seconds
+            setTimeout(() => {
+                chatBox.innerHTML = ''; // Clear chat after 10 seconds
+            }, 10000); // 10000 ms = 10 seconds
+        }, 1000); // Bot response delay of 1 second
+    }
+}
                 // Array of facts to display in the carousel
 const facts = [
     "Diabetes is one of the leading causes of kidney failure.",
@@ -510,7 +578,12 @@ const facts = [
     "Regular physical activity can improve insulin sensitivity.",
     "Monitoring blood sugar levels is crucial for managing diabetes."
 ];
-
+document.addEventListener("DOMContentLoaded", () => {
+    const photoCards = document.querySelectorAll(".photo-card");
+    photoCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.3}s`;
+    });
+});
 // Function to rotate the text in the carousel
 let factIndex = 0;
 function rotateFacts() {
@@ -518,7 +591,17 @@ function rotateFacts() {
     carouselText.textContent = facts[factIndex];
     factIndex = (factIndex + 1) % facts.length; // Loop back to the first fact after reaching the last one
 }
-
+const btn = document.getElementById("backToTop");
+  window.onscroll = () => {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+  btn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 // Set the fact rotation interval (e.g., every 5 seconds)
 setInterval(rotateFacts, 5000);
 
@@ -526,17 +609,20 @@ setInterval(rotateFacts, 5000);
 rotateFacts();
 function toggleLinks() {
     const arrowLinks = document.querySelector('.arrow-links');
-    const isVisible = arrowLinks.style.display === 'block';
+    const isHidden = arrowLinks.style.display === 'none';
+    arrowLinks.style.display = isHidden ? 'block' : 'none';
 
     // Toggle visibility with animation
     arrowLinks.style.display = isVisible ? 'none' : 'block';
-    arrowLinks.style.opacity = isVisible ? '0' : '1'; // Fade in/out effect
-
+    arrowLinks.style.opacity = isVisible ? '0' : '1';
+    arrowLinks.style.transition = 'opacity 0.3s ease';
+    
     // Change arrow direction when links are visible
     const arrowIcon = document.querySelector('.arrow-navigation i');
     arrowIcon.classList.toggle('fa-arrow-left');
     arrowIcon.classList.toggle('fa-arrow-right');
 }
+
 
             </script>
     <footer>
