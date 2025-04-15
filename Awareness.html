@@ -281,7 +281,7 @@ html {
         }
         .carousel-container {
             background-color: white;
-            padding: 20px;
+            padding: 40px;
             border-left: 6px solid #28a745;
             border-radius: 8px;
             max-width: 600px;
@@ -334,45 +334,16 @@ html {
             margin: 0;
             color: #333;
             }
-            .arrow-navigation {
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    transition: transform 0.3s ease;
-    top: 20px;
-    left: 20px;
-    position: absolute;
-}
-
-.arrow-navigation:hover {
-    transform: rotate(180deg);
-}
-
-.arrow-links {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 60px; /* Position below the header */
-    left: 20px;
-    background-color: #3498db;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    text-align: center;
-    transition: opacity 0.3s ease;
-}
-
-.arrow-links a {
-    display: block;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 16px;
-}
+            a {
+                text-decoration: none;
+                list-style-type: none;
+                display: flex;
+                color: #000;
+            }
 #backToTop {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 30px; 
   padding: 10px 15px;
   border: none;
   border-radius: 50%;
@@ -404,9 +375,9 @@ footer{
         <header>
             <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
               <nav>
-                <li><a href="Awareness.html">Awareness</a></li>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="About.html">About</a><li>
+                <a href="Awareness.html">Awareness</a>
+                <a href="home.html">Home</a>
+                <a href="About.html">About</a>
              </nav>
         </header>
         <button id="backToTop">↑</button>

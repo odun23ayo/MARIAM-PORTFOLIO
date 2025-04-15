@@ -12,11 +12,15 @@
       margin: 0;
       padding: 0;
     }
-
+    html {
+  scroll-behavior: smooth;
+}
     header {
       background-color: #fff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 10px 0;
+      position: sticky;
+    
     }
 
     nav ul {
@@ -40,7 +44,6 @@
       border-radius: 5px;
       transition: background-color 0.3s; 
     }
-
     nav ul li a:hover {
       color: #0056b3;
     }
@@ -149,9 +152,9 @@
 <body>
 
   <header>
-    <nav>
+    <nav class="navy">
       <ul>
-        <li><a href="landing.html">Landing Page</a></li>
+        <li><a href="home.html">Home Page</a></li> 
         <li><a href="About.html">About Me</a></li>
         <li><a href="Awareness.html">Awareness</a></li>
         <li><a href="#contact">Contact Me</a></li>

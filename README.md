@@ -2,7 +2,7 @@
 # Diabetes Awareness Website
 This project aims to educate the public about diabetes, its risks, symptoms, prevention, and management. The website provides insightful information across multiple sections to promote awareness and healthy living.
 ## Table of Contents
-- [Landing Page](#landing-page)
+- [Home Page](#home-page)
 - [Awareness Page](#awareness-page)
 - [About Page](#about-page)
 - [Contact Page](#contact-page)
@@ -12,9 +12,9 @@ This project aims to educate the public about diabetes, its risks, symptoms, pre
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-## Landing Page
+## Home Page
 ![alt text](image-1.png)
-The landing page serves as the entry point to the website, offering an overview of the project's mission and guiding users to various sections. It includes:
+The home page serves as the entry point to the website, offering an overview of the project's mission and guiding users to various sections. It includes:
 - **Header**: Contains the website logo and navigation links.
 - **Hero Section**: Features a welcome message and an introduction to the website's purpose.
 - **Information Sections**: Provides brief insights into different aspects of diabetes awareness.
@@ -24,6 +24,7 @@ The awareness page offers detailed information about diabetes, including its typ
 - **Educational Content**: In-depth articles on diabetes risks, symptoms, and management strategies.
 - **Interactive Elements**: Engages users with quizzes and infographics to enhance understanding.
 - **Resource Links**: Directs users to reputable sources for further reading.
+- **Inbuilt chatbot**: Interactivity which enables more information and gives risks and symptoms. 
 ## About Page
 The about page shares the motivation behind creating the website and introduces the author. It includes:
 - **Author's Story**: Personal narrative explaining the inspiration for the project.

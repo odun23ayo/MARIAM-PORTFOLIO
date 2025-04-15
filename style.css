@@ -20,7 +20,7 @@
     margin-top: 15px;
   }
   
-  .health-icons i {
+  .health-icons i { 
     font-size: 30px;
     color: #0077cc; /* Blue color */
     transition: transform 0.3s ease, color 0.3s ease;
@@ -89,7 +89,7 @@
   .search-form .but {
     padding: 8px 12px;
     border: none;
-    background-color: #005fa3;
+    background-color:#004b87;
     color: white;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
@@ -124,7 +124,7 @@
     margin: 25px 0;
   }
   .doctor-image {
-    width: 400px;  /* Keep the doctor image large */
+    width: 500px;  /* Keep the doctor image large */
     border-radius: 10px;
     transition: transform 0.3s ease; 
   }
@@ -205,7 +205,7 @@
   .btn {
     display: inline-block;
     margin-top: 10px;
-    background-color: #0077cc;
+    background-color: #005fa3;
     color: white;
     padding: 8px 14px;
     text-decoration: none;
@@ -226,11 +226,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background-color: #0077cc;
       display: flex;
+      background-color: #005fa3;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding:  5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
   
@@ -241,6 +241,7 @@
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visibility */
   }
   
   /* Responsive Tweaks */
@@ -261,7 +262,6 @@
       flex-direction: column;
       align-items: stretch;
     }
-  
     .search-form input,
     .search-form .but {
       width: 100%;
