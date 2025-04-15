@@ -167,6 +167,8 @@ html {
 }
 .photo-card {
     transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
 }
 .photo-card:hover {
     transform: scale(1.05);
@@ -401,18 +403,11 @@ footer{
     <div class="content">
         <header>
             <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
-            <!-- Arrow navigation icon -->
-            <div class="arrow-navigation" onclick="toggleLinks()">
-                <i class="fa-solid fa-arrow-left"></i>
-            </div>
-            
-            <!-- Links for pages -->
-            <div class="arrow-links">
-                <a href="Awareness.html">Page 1</a>
-                <a href="landing.html">Page 2</a>
-                <a href="About.html">Page 3</a>
-                <a href="contact.html">Page 4</a>
-            </div>
+              <nav>
+                <li><a href="Awareness.html">Awareness</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a><li>
+             </nav>
         </header>
         <button id="backToTop">↑</button>
         <h2>Photo Gallery of Diabetes Diets</h2>
@@ -442,7 +437,7 @@ footer{
                 <p>Cherry 🍒 </p>
             </div>
             <div class="photo-card">
-                <img src="./images/chi.jpg" alt="chia seeds">
+                <img src="./images/chi.jpg" alt="turkey">
                 <p>Turkey</p>
             </div>
             <div class="photo-card">
