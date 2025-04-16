@@ -14,7 +14,7 @@
             padding: 0;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif ;
             background-color: #f5f5f5;
             text-align: center;
             display: flex;
@@ -25,15 +25,18 @@
 html {
   scroll-behavior: smooth;
 }
-
         header {
-            background: #2c3e50;
+            background:  #004b87;
             color: white;
-            padding: 20px;
+            padding: 10px 0;
             text-align: center;
-            font-size: 24px;
             font-weight: bold; 
             margin-bottom: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         /* Responsive design tweaks */
         @media (max-width: 768px) {
@@ -61,7 +64,7 @@ html {
             color: #f2f2f2;
             background-color: #3498db;
             padding: 15px;
-            border-radius: 5px;
+            margin: 5px;
         }
         table {
             width: 80%;
@@ -124,6 +127,9 @@ html {
             text-align: right;
             margin-left: auto;
         }
+        nav a:hover{
+        color: #333;
+        }
         input {
             width: 80%;
             padding: 8px;
@@ -165,6 +171,15 @@ html {
     justify-items: center;
     margin-top: 15px;
 }
+nav{
+    text-align: center;
+    justify-content: right;
+    display: flex;
+    padding: 15px;
+    font-weight: 500;
+    gap: 15px;
+
+}
 .photo-card {
     transition: transform 0.3s ease;
     max-width: 100%;
@@ -191,24 +206,33 @@ html {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body {
         font-size: 16px;
         padding: 10px;
     }
-
+    nav a {
+        flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
     header {
-        font-size: 20px;
+        font-size: 17px;
         padding: 15px;
+        flex-direction: column;
+      align-items: flex-start;
     }
 
     table {
         width: 100%;
         font-size: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     th, td {
         padding: 8px;
+        width: 100%;
+        height: auto;
     }
 
     .photo-card p {
@@ -218,23 +242,13 @@ html {
     .carousel-container, .bot-container {
         width: 100%;
         padding: 15px;
+        position: static;
     }
 
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 15px;
     }
-
-    .arrow-links {
-        width: 90%;
-        left: 5%;
-    }
-
-    .arrow-navigation {
-        top: 10px;
-        left: 10px;
-    }
-
     .tips-grid {
         grid-template-columns: 1fr;
     }
@@ -244,14 +258,10 @@ html {
         right: 20px;
     }
 }
-@media (max-width: 500px) {
-    .arrow-links {
-        width: 90%;
-        font-size: 14px;
-    }
-
-    .arrow-navigation {
-        font-size: 20px;
+@media (max-width: 300px) {
+    footer{
+        width: 100%;
+        text-align: center;
     }
 }
 @media (max-width: 500px) {
@@ -292,6 +302,7 @@ html {
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1s ease-in-out;
             margin-top: 15px;
+            position: static;
         }
         @keyframes fadeIn {
             from {
@@ -338,7 +349,17 @@ html {
                 text-decoration: none;
                 list-style-type: none;
                 display: flex;
-                color: #000;
+                text-align: center;
+                align-items: center;
+                color: white;
+            }
+            .slide-text{
+                opacity: 0;
+    transform: translateX(100%);
+    animation: slideInFromRight 0.8s ease-out forwards;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
             }
 #backToTop {
   position: fixed;
@@ -357,9 +378,6 @@ html {
 #backToTop:hover {
   background-color: #0056b3;
 }
-.arrow-links a:hover {
-    background-color: #2980b9;
-}
 footer{
     background-color: #5a9bd8;
     margin: 20px;
@@ -375,9 +393,10 @@ footer{
         <header>
             <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
               <nav>
-                <a href="Awareness.html">Awareness</a>
-                <a href="home.html">Home</a>
                 <a href="About.html">About</a>
+                <a href="home.html">Home</a>
+                <a href="Awareness.html">Awareness</a>
+                <a href="contact.html">Contact</a>
              </nav>
         </header>
         <button id="backToTop">↑</button>
@@ -443,6 +462,14 @@ footer{
             <div class="photo-card">
                 <img src="./images/oliv.jpeg" alt="olive oil">
                 <p>Olive</p>
+            </div>
+            <div class="photo-card">
+                <img src="./images/app.jpeg" alt="fruit">
+                <p>Apple</p>
+            </div>
+            <div class="photo-card">
+                 <img src="./images/len.jpeg">
+                 <p>Grains</p>
             </div>
         </div>
         <div style="overflow-x:auto;">
@@ -640,7 +667,7 @@ function checkInput(input) {
                 // Array of facts to display in the carousel
 const facts = [
     "Diabetes is one of the leading causes of kidney failure.",
-    "Proper nutrition can help manage diabetes effectively.",
+    "Proper nutrition can help to manage  diabetes effectively.",
     "Regular physical activity can improve insulin sensitivity.",
     "Monitoring blood sugar levels is crucial for managing diabetes."
 ];

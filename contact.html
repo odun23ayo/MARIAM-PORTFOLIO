@@ -16,11 +16,15 @@
   scroll-behavior: smooth;
 }
     header {
-      background-color: #fff;
+      background-color: #004b87;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 10px 0;
+      padding: 30px;
+      align-items: flex-end;
+      justify-content: right;
       position: sticky;
-    
+      top: 0;
+      z-index: 1000;
+      display: flex;
     }
 
     nav ul {
@@ -38,14 +42,14 @@
 
     nav ul li a {
       text-decoration: none;
-      color: black;
+      color: #fff;
       font-weight: bold;
       padding: 8px 16px;
       border-radius: 5px;
       transition: background-color 0.3s; 
     }
     nav ul li a:hover {
-      color: #0056b3;
+      color: #333;
     }
 
     .container {
@@ -86,7 +90,6 @@
       cursor: pointer;
       font-size: 16px;
     }
-
     button:hover {
       background-color: #0056b3;
     }
@@ -154,10 +157,10 @@
   <header>
     <nav class="navy">
       <ul>
-        <li><a href="home.html">Home Page</a></li> 
-        <li><a href="About.html">About Me</a></li>
+        <li><a href="About.html">About </a></li>
+        <li><a href="home.html">Home</a></li> 
         <li><a href="Awareness.html">Awareness</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
