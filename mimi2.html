@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Meal Plan</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #005fa3;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Desktop Menu */
+        .desktop-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .desktop-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none; /* Hide by default */
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+        }
+
+        .hamburger-menu .bar {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            transition: 0.4s;
+        }
+
+        /* Mobile Menu */
+        .nav-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-menu.show {
+            display: block; /* Show when toggled */
+        }
+
+        .nav-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none; /* Hide desktop menu on mobile */
+            }
+
+            .hamburger-menu {
+                display: flex; /* Show hamburger menu on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="slide-text">7-Day Diabetes Meal Plan</h1>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <a href="#home">Home</a>
+            <a href="#symptoms">Symptoms</a>
+            <a href="#risks">Risks</a>
+            <a href="#mealplan">Meal Plan</a>
+        </nav>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+            <button id="menu-toggle">
+                <span class="bar"></span>
+            </button>
+            <button id="menu-toggle">
+                <span class="bar"></span>
+            </button>
+            <button id="menu-toggle">
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="nav-menu" id="navMenu">
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#symptoms">Symptoms</a></li>
+                    <li><a href="#risks">Risks</a></li>
+                    <li><a href="#mealplan">Meal Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

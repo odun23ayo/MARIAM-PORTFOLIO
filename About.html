@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
+          *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
     body{
         font-family:Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f5f5f5;
+        background-color: white;
     }
     html {
   scroll-behavior: smooth;
@@ -19,11 +24,28 @@
        justify-content: space-between;
        align-items: center;
        padding: 15px 50px;
-       background:#005fa3;
+       background: #005fa3;
        position: sticky;
        top: 0;
        z-index: 1000;
     }
+    .heading {
+    display: flex;
+    align-items: center;
+  }
+  
+  .small-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color:#fff;
+  }
     header h1{
        color: #ecf0f1;
        font-size: 30px;
@@ -42,20 +64,12 @@
     nav ul li a {
         text-decoration: none;
         color: white;
-        font-weight: bold;
         padding: 10px 15px;
         transition: 0.3s;
     }
     nav ul li a.active {
     color:white;
 }
-
-    .contact-btn{
-        background: #8e44ad;
-        color: white !important;
-        padding: 8px 15px;
-        border-radius: 5px;
-    }
     .hero{
         display: flex;
         align-items: center;
@@ -165,6 +179,9 @@
         color: #2c3e50;
         text-decoration: underline;
     }
+    nav:hover{
+        color: #333;
+    }
     .portfolio{
         text-align: center;
         padding: 60px 10%;
@@ -181,13 +198,6 @@
     }
     .portfolio-item img:hover{
         transform: scale(1.1);
-    }
-    .small-pic{
-        width: 100px;
-        height: auto;
-        border-radius: 10px;
-        align-items: center;
-        margin: 0%;
     }
     footer{
         text-align: center;
@@ -259,15 +269,9 @@
 
 
 @media (max-width: 600px) {
-    .contact-btn {
-        width: 100%;             /* Ensure the contact button is full width */
-        margin-top: 15px;        /* Add margin to separate from other elements */
-    }
-
     nav ul {
         margin-top: 20px;        /* Add margin at the top for spacing */
     }
-    
     nav ul li a {
         font-size: 16px;         /* Adjust font size for small screens */
     }
@@ -277,14 +281,16 @@
 </head>
 <body>
     <header>
-        <img src="./images/one diabetes.jpg" class="small-pic">
-            <h1>Adekunle</h1>
+        <div class="heading">
+        <img src="./images/IMG-20250407-WA0009.jpg" class="small-logo">
+        <h1 class="logo">MAVERICK</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#" class="active">About</a></li>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="Awareness.html">Awareness </a></li>
-                <li><a href="contact.html" class="contact-btn">Contact</a></li>
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="backup.html">Awareness </a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
